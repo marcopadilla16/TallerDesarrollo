@@ -91,4 +91,3 @@ Además de generar el plan, el usuario puede seleccionar qué contenido adiciona
 * Resumen
 * Ejercicios tipo parcial
 * Preguntas de autoevaluación
-* Simulacro de examen
