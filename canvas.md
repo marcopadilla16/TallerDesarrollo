@@ -3,12 +3,24 @@
 > **Equipo:** …
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 1 · **Fecha:** 29/09/2026
+> **Versión:** 2 · **Fecha:** 29/09/2026
 
 ## Cómo se usa
 
 Este canvas se completa **en equipo** durante la Clase, y se pushea al repo del
 equipo como `canvas.md`. Es un documento vivo, se revisa cada vez que cambia alguna definición. El history se usa en la evaluación.
+
+## Estado de validación actual
+
+- **Confirmado (preliminar):** existe señal de problema de priorización y de
+  uso de herramientas parciales (organización + recursos sueltos).
+- **En validación:** magnitud del problema, adopción real en el segmento
+  objetivo, y umbrales de éxito de la PoC.
+- **Pendiente docente:** criterios finales de corte para métricas y alcance
+  esperado de detalle en proxies técnicas y riesgos éticos.
+- **Alternativa metodológica:** cuando no haya trabajo de campo en esta etapa,
+  se usarán datos sintéticos sólo para diseñar instrumentos y probar
+  sensibilidad, **no** para validar hipótesis en población real.
 
 Algunas convenciones:
 
@@ -45,21 +57,42 @@ El progreso que intenta lograr es llegar preparado al examen aprovechando el tie
 
 ### Cuánto le cuesta
 
-*Fede: hay que revisar esta parte*
+El costo no es sólo "estudiar muchas horas", sino usar mal horas escasas en la etapa más sensible (días previos a parciales/finales). El impacto aparece en tres planos:
+
+- **Tiempo:** horas perdidas en decidir qué estudiar, reordenar prioridades y rehacer cronogramas.
+- **Carga mental/emocional:** ansiedad, incertidumbre y fatiga de decisión por no saber si se está priorizando bien.
+- **Resultado académico:** riesgo de subestudiar temas de alto peso y sobreestudiar temas de bajo impacto, llegando al examen con cobertura desbalanceada.
+
+En síntesis, el costo principal es de asignación ineficiente del tiempo disponible, no de falta total de horas.
+
+Como oportunidad de mejora, esta hipótesis se puede convertir en evidencia dentro del trimestre con un mínimo viable de validación:
+
+- **Encuesta corta** (10-20 estudiantes): medir tiempo de planificación, percepción de ansiedad y autopercepción de priorización.
+- **Entrevistas breves** (6-8 estudiantes): entender decisiones reales ("qué eligen estudiar primero y por qué") y detectar patrones.
+
+Qué se pretende medir con ese mínimo viable:
+
+- **Tiempo de planificación** antes de estudiar (línea de base).
+- **Nivel de incertidumbre** percibido antes del examen.
+- **Señales de mala priorización** (temas clave relegados, repaso insuficiente, cambios de plan de último momento).
+
+**ALTERNATIVA DATOS SINTETICOS:** si no se llega a trabajo de campo en esta etapa, se puede usar una simulación con datos sintéticos sólo para diseñar métricas y probar escenarios (conservador/medio/crítico), dejando explícito que no reemplaza evidencia empírica ni valida el problema en población real.
 
 ### Evidencia
 
 #### De confirmación
 
-- Nosotros mismos cuando estudiabamos. *Fede: hay que agregar datos? entrevistas? o la propia experiencia alcnaza?*
-- Existencia y uso masivo de apps de organización del estudio (Notion, calendarios, técnica Pomodoro, planners) como señal de que el problema de organización se resuelve hoy con apaños.
-- Popularidad de resúmenes y bancos de ejercicios compartidos (grupos de WhatsApp/Drive por materia) como indicio de la falta de material a medida.
+- Experiencia propia del equipo y de compañeros cercanos: señal exploratoria útil para formular la hipótesis, pero insuficiente como evidencia concluyente por sí sola.
+- Existencia y uso frecuente de herramientas de organización del estudio (Notion, calendarios, técnica Pomodoro, planners) como señal de que el problema se intenta resolver con alternativas parciales.
+- Circulación de resúmenes y bancos de ejercicios compartidos (grupos de WhatsApp/Drive por materia) como indicio de búsqueda activa de apoyo para llegar a examen.
+- Plan de validación empírica dentro del trimestre: encuesta corta (10-20 estudiantes) + entrevistas breves (6-8 estudiantes) para medir dificultad de priorización, tiempo de planificación e incertidumbre percibida.
 
 #### De refutación
 
 - Si al preguntar, los estudiantes dicen que ya se organizan bien solos (con su propio criterio o una simple lista) y no cambiarían, el dolor es menor del que suponemos.
 - Que el cuello de botella real sea entender el contenido, no organizarlo.
 - Que la ansiedad ante el examen no se reduzca con un plan (podría incluso aumentar la presión de "cumplir el cronograma").
+- Que la evidencia de campo no confirme la hipótesis central de priorización (por ejemplo, que el problema dominante sea disciplina, comprensión o falta de horas, y no organización).
 
 ---
 
@@ -203,8 +236,15 @@ disperso y de calidad variable, ansiedad.
 
 #### De confirmación
 
-- Uso masivo de apps de organización y de chatbots para estudiar (rastro
-  observable: grupos, tutoriales, posts). *Fede: como verificamos esto?*
+- Hipótesis verificable: una proporción relevante de estudiantes usa al menos
+  una herramienta de organización (Notion, calendario, Pomodoro, planners) y al
+  menos un chatbot/LLM para tareas de estudio.
+- Validación mínima dentro del trimestre: encuesta corta (20-30 estudiantes) y
+  registro de frecuencia de uso (diario/semanal/ocasional), casos de uso
+  (planificar, resumir, practicar) y combinación de herramientas.
+- Criterio preliminar de lectura: si una mayoría de la muestra usa "organización
+  + chatbot", hay señal de hábito instalado; si aparece baja adopción o uso sin
+  valor percibido, la hipótesis pierde fuerza.
 - Existencia de bancos de parciales y resúmenes compartidos por materia.
 
 #### De refutación
@@ -212,6 +252,10 @@ disperso y de calidad variable, ansiedad.
 - Que el statu quo "ChatGPT + calendario" ya sea suficientemente bueno y el
   estudiante no vea razón para cambiar.
 - Que la mejora percibida no justifique aprender una herramienta nueva.
+- Que la evidencia de campo no confirme adopción real de herramientas de
+  organización y chatbots en el segmento objetivo.
+
+**ALTERNATIVA DATOS SINTETICOS:** si no se llega a trabajo de campo en esta etapa, se puede usar una simulación con datos sintéticos para probar el instrumento y el análisis, dejando explícito que no valida adopción real.
 
 ---
 
@@ -219,8 +263,16 @@ disperso y de calidad variable, ansiedad.
 
 ### Dataset
 
-Una fila por dato. En "¿Lo vimos?" va Sí sólo si alguien lo abrió, no si está
-publicado. *Fede: no entendi esto*
+Una fila por dato.
+
+En "¿Lo vimos?" va:
+
+- **Sí**: cuando el equipo accedió y revisó una muestra real de ese dato/fuente.
+- **No**: cuando sabemos que existe o está publicado, pero todavía no lo
+  inspeccionamos directamente.
+
+Ejemplo: un temario en la web de cátedra puede ser "Público = Sí", pero
+"¿Lo vimos? = No" si aún no lo abrimos/revisamos.
 
 | Dato | Origen | ¿Público? | ¿Lo vimos? | ¿Sensibles? | Sesgo conocido | Comentarios |
 |---|---|---|---|---|---|---|
@@ -241,7 +293,7 @@ publicado. *Fede: no entendi esto*
 
 #### De refutación
 
-- Wl dato clave (feedback de si el plan funcionó y si
+- El dato clave (feedback de si el plan funcionó y si
   aprobó) no existe hoy y sólo aparece después de meses de uso; sin él no se
   puede medir éxito real ni mejorar la priorización.
 - Que la autoevaluación de nivel sea tan poco fiable que degrade todo el plan.
@@ -260,13 +312,23 @@ plan)
 (retención = señal de que sirvió)
 * tiempo dedicado a **planificar** antes vs. después (debe bajar).
 
-### Umbral — por debajo de esto, no vale la pena
+### Umbral preliminar (a validar)
 
-*Fede: estos numeros estan tirados al azar, hay que validar con el profe*
+Estos valores se usan como objetivo inicial de trabajo para el trimestre. No son
+definitivos: se validan con docente, línea de base y resultados de la prueba
+piloto.
 
-- Adherencia al plan ≥ 60% de las sesiones planificadas.
-- Reducción del tiempo de planificación de ≥ 50% respecto de la línea de base.
-- Retención: ≥ 30% de usuarios vuelven a usarlo para un segundo examen.
+**PENDIENTE DOCENTE:** validar estos rangos preliminares y el criterio de corte
+de "no vale la pena" para evitar umbrales arbitrarios.
+
+- Adherencia al plan: objetivo preliminar entre 50% y 70% de las sesiones planificadas.
+- Reducción del tiempo de planificación: objetivo preliminar entre 30% y 50% respecto de la línea de base.
+- Retención: objetivo preliminar entre 20% y 40% de usuarios que vuelven a usarlo para un segundo examen.
+
+**ALTERNATIVA DATOS SINTETICOS:** si no se llega a medir estos umbrales con
+trabajo de campo en esta etapa, se usan escenarios sintéticos
+(conservador/intermedio/exigente) sólo para análisis de sensibilidad y ajuste
+del criterio, no para validar impacto real.
 
 ### Cómo se mediría dentro del trimestre, aunque sea de forma aproximada
 
@@ -275,11 +337,24 @@ plan)
 
 ### Métrica técnica que usaríamos como proxy
 
-*Fede: aca no estoy seguro, hay que validar bien que se pide*
-- Calidad del contenido generado evaluada por rúbrica: % de resúmenes/
-  ejercicios sin errores conceptuales (revisión manual sobre muestra).
-- Validez estructural del plan: % de planes que respetan las horas
-  disponibles y cubren todos los temas (verificable automáticamente).
+- Calidad del contenido generado evaluada por rúbrica: porcentaje de
+  resúmenes/ejercicios sin errores conceptuales críticos, con revisión manual
+  sobre muestra. Unidad: % de piezas correctas sobre total revisado.
+- Validez estructural del plan: porcentaje de planes que respetan las horas
+  disponibles y cubren todos los temas ingresados. Unidad: % de planes válidos
+  sobre total generado (verificable automáticamente).
+- Coherencia de priorización: porcentaje de planes cuya asignación de tiempo es
+  consistente con nivel declarado + cercanía de examen + objetivo del usuario,
+  evaluado con checklist simple sobre muestra. Unidad: % de planes coherentes
+  sobre total evaluado.
+
+**ALTERNATIVA DATOS SINTETICOS:** si no se llega a una muestra real suficiente
+en esta etapa, se puede usar un set de casos sintéticos etiquetados (planes
+esperables vs. defectuosos) para probar la métrica y el validador, dejando
+explícito que no sustituye validación en uso real.
+
+**PENDIENTE DOCENTE:** confirmar si estas proxies técnicas y su nivel de detalle
+cumplen con lo esperado por la consigna de la cátedra.
 
 ### Qué se registra de cada uso
 
@@ -305,44 +380,44 @@ examen. Sin este registro el sistema no aprende de su propio funcionamiento.
 
 ## 7. Riesgos éticos y de sesgo (preliminar)
 
-*Fede: aca hay que revisar todo; sobre todo si hay que responder a cada individual o se puede mergear como esta en la diapositiva de la clase*
+Para mantener esta sección accionable, consolidamos cada riesgo con su impacto,
+grupo afectado y mitigación mínima en esta etapa:
 
-- **Asignación (allocative):** bajo en B2C individual; el sistema no reparte un
-  recurso escaso entre personas. Riesgo indirecto: si se usara a nivel
-  institucional para priorizar apoyo, podría desatender a quien más lo necesita.
-- **Calidad de servicio (quality of service):** el LLM probablemente funcione
-  mejor para materias y bibliografía muy representadas (en inglés, carreras
-  populares) y peor para materias de nicho. Los peor servidos son los menos presentes en los datos del modelo.
-- **Representación (representational):** riesgo bajo, pero la autoevaluación
-  "nivel bajo/medio/alto" podría etiquetar y desmotivar; el tono de las
-  explicaciones podría reforzar estereotipos ("no sos bueno en esto").
-- **Interpersonal:** los datos académicos (qué le cuesta, qué nivel tiene, notas)
-  son **sensibles**; exposición o filtración expone algo privado y puede
-  avergonzar. Pérdida de autonomía si el estudiante sigue el plan sin criticarlo.
-- **Social (societal):** a escala, dependencia de la herramienta para organizar
-  el estudio (se pierde la capacidad de planificar solo); riesgo de que el
-  material generado con errores se difunda; y de que se use para "estudiar para
-  el examen" sin aprender (optimizar la métrica equivocada).
+| Tipo de riesgo | Impacto posible | Afectados principales | Mitigación propuesta |
+|---|---|---|---|
+| **Asignación (allocative)** | Bajo en B2C individual (no reparte recursos escasos), pero con riesgo indirecto si una institución lo usara para priorizar apoyos | Estudiantes con mayor necesidad de acompañamiento | Definir explícitamente alcance B2C; prohibir uso institucional para ranking/priorización sin evaluación específica |
+| **Calidad de servicio (quality of service)** | Rendimiento desigual por materia/idioma; peor servicio en materias de nicho | Estudiantes de carreras/temas poco representados | Mostrar límites de cobertura; incorporar revisión del usuario y flag de contenido dudoso |
+| **Representación (representational)** | Etiquetado/desmotivación por autoevaluación y tono de feedback | Estudiantes con baja autoconfianza o menor capital académico | Cuidar lenguaje de explicaciones; evitar juicios identitarios; centrar feedback en acciones de estudio |
+| **Interpersonal y privacidad** | Exposición de datos académicos sensibles; pérdida de autonomía por sobreconfianza en el plan | Usuarios que cargan nivel, dificultades y resultados | Minimización de datos, consentimiento informado, y opción de editar/ignorar recomendaciones |
+| **Social (societal)** | Dependencia de la herramienta y difusión de contenido incorrecto con apariencia confiable | Comunidad estudiantil en uso extendido | Diseñar para enseñar priorización (no sólo "dar respuesta"), e incluir revisión humana como parte del flujo |
 
-Sobre **quién decide el sistema** aunque no lo use: sobre el propio estudiante
-(su plan), y potencialmente sobre cómo un docente percibe su preparación si se
-comparte el output.
+Sobre **quién decide el sistema**, decide principalmente sobre el propio
+estudiante (qué estudiar y cuándo), y potencialmente influye en terceros si ese
+output se comparte.
 
-Datos que podrían ser **proxy indebido:** la autoevaluación de nivel o el objetivo
-elegido podrían correlacionar con trayectoria/recursos del estudiante; cuidado si
-alguna vez se usa para segmentar o rankear.
+Datos con riesgo de **proxy indebido**: autoevaluación de nivel y objetivo elegido
+podrían correlacionar con trayectoria/recursos; no deben usarse para segmentar,
+rankear o calificar.
 
-**Para qué NO debería usarse:** para evaluar, calificar o comparar estudiantes; ni
-como sustituto de estudiar/entender. Si un docente lo usara para juzgar, sería un
-uso indebido con daño directo.
+**Para qué NO debería usarse:** evaluar, calificar o comparar estudiantes, ni
+reemplazar el proceso de comprensión del contenido.
 
-Cuando el sistema se equivoca (ejercicio incorrecto, prioridad mala), el usuario
-debe poder **detectarlo y corregirlo**: por eso la supervisión humana es parte del
-diseño (revisar, editar, ignorar el plan).
+Cuando el sistema se equivoca (prioridad mala, ejercicio incorrecto), el usuario
+debe poder detectarlo y corregirlo (revisar, editar, ignorar el plan). Esa
+supervisión humana no es opcional: es una condición de diseño.
 
-Regulación: **educación** aparece en la lista de dominios sensibles; conviene
-revisar normativa de protección de datos personales de estudiantes (menores en
-algunos casos) antes de escalar.
+**ALTERNATIVA DATOS SINTETICOS:** como oportunidad de mejora, si no se llega a
+validar estos riesgos con campo en esta etapa, se pueden construir escenarios
+sintéticos de falla (por ejemplo, materia de nicho + autoevaluación sesgada +
+recomendación errónea) para probar mitigaciones, dejando explícito que no
+reemplaza evidencia empírica.
+
+Regulación: educación es un dominio sensible; antes de escalar conviene revisar
+normativa de protección de datos personales aplicable a estudiantes (incluyendo
+casos de menores de edad).
+
+**PENDIENTE DOCENTE:** confirmar el alcance mínimo esperado para esta sección
+de ética/sesgo (formato consolidado vs. desarrollo individual por sub-tipo de riesgo).
 
 ### Evidencia
 
@@ -366,4 +441,5 @@ algunos casos) antes de escalar.
 
 | Fecha | Versión | Cambio | Responsable |
 |---|---|---|---|
-| 2026-09-25 | 1 | Primera version | … |
+| 2026-09-25 | 1 | Versión inicial del canvas | Fede S. |
+| 2026-09-29 | 2 | Revisión de consistencia; resolución de dudas #1 a #7; marcado de pendientes con docente y alternativas con datos sintéticos | Marco P. |
