@@ -1,0 +1,7 @@
+estas fueron las preguntas teóricas del final:
+
+1. Encontrar similitudes entre dos definiciones dadas de SGBD.
+2. Restricciones referenciales. Definición
+3. Definir: DML / DDL
+4. En el anexo(ej que te da antes jorge para que le lleves un diagrama ER), especificar Restricciones referenciales.
+5. Que tipo de subconsultas se conocen? Dar ej.

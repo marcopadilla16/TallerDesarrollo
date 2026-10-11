@@ -3,7 +3,7 @@
 > **Equipo:** …
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 2 · **Fecha:** 29/09/2026
+> **Versión:** 3 · **Fecha:** 11/10/2026
 
 ## Cómo se usa
 
@@ -274,12 +274,19 @@ En "¿Lo vimos?" va:
 Ejemplo: un temario en la web de cátedra puede ser "Público = Sí", pero
 "¿Lo vimos? = No" si aún no lo abrimos/revisamos.
 
+**Decisión de arquitectura (11/10/2026).** El material de cada materia
+—temario, parciales, guías— **lo sube el propio usuario** cuando pide el plan.
+El equipo no recolecta ni mantiene un corpus de cátedras. Esto cambia quién es
+responsable de la vigencia del material (pasa a ser el usuario) y convierte al
+material en una **entrada en tiempo de uso**, no en un dataset del proyecto.
+Los 14 archivos de `datos/` quedan como **banco de pruebas** del equipo.
+
 | Dato | Origen | ¿Público? | ¿Lo vimos? | ¿Sensibles? | Sesgo conocido | Comentarios |
 |---|---|---|---|---|---|---|
 | Formulario del usuario (materia, temas, fecha, nivel, horas, objetivo) | Ingresado por el propio usuario | No | No | Sí (datos académicos personales) | Autoevaluación de nivel subjetiva y sesgada | Dato del que más depende el producto; se genera en uso, hay que registrarlo desde el día 1 |
-| Conocimiento base para generar plan/contenido | Modelo LLM preentrenado (proveedor) | No (pesos), sí el servicio | No | No | Sesgos del corpus de entrenamiento del LLM; puede alucinar | No entrenamos el modelo; consumimos API. Riesgo: cobertura despareja por materia/idioma |
-| Programas y temarios de cátedras | Sitios de facultades / cátedras | Parcial | No | No | Desactualización | Útil para validar que los temas y su peso sean reales |
-| Parciales/finales anteriores | Cátedras, repositorios estudiantiles | Parcial | No | Puede tener nombres | Sesgo de "lo que tomó históricamente ≠ lo que tomará" | Serviría para calibrar priorización y simulacros |
+| **Material de la materia (temario, parciales, guías de práctica)** | **Lo sube el propio usuario al pedir el plan** | No | No | Puede traer nombres de docentes en metadatos | El usuario sube lo que tiene a mano, que puede estar incompleto o desactualizado | **El equipo no mantiene un corpus:** cada usuario aporta el material de su cursada. Nos saca el problema de la vigencia y nos agrega el de aceptar cualquier archivo |
+| Conocimiento base para generar plan/contenido | Modelo LLM preentrenado de un proveedor externo: **ChatGPT (OpenAI) o Claude (Anthropic)**, a definir entre los dos | No (pesos), sí el servicio vía API | No | No | Sesgos del corpus de entrenamiento del LLM; puede alucinar | No entrenamos el modelo; consumimos API de pago por uso. Riesgo: cobertura despareja por materia/idioma, y fecha de corte distinta en cada uno |
+| **Banco de pruebas del equipo** (`datos/`: 14 archivos, 3 cátedras) | Repositorios estudiantiles, reunido por el equipo | Parcial | **Sí** (11/10/2026) | Sí: 2 archivos con nombre real de persona en metadatos | 1 sola carrera; 55% del texto es material compilado por estudiantes | **No es insumo del producto, es banco de pruebas.** Sirve para probar el sistema con archivos parecidos a los que va a subir un usuario real |
 | Feedback de resultado (¿el plan sirvió? ¿aprobó?) | Registrado por el usuario post-uso | No | No | Sí (nota/resultado académico) | Sesgo de respuesta (contesta quien está conforme) | Sin esto no hay "respuesta correcta" para mejorar ni para medir éxito |
 
 
@@ -289,7 +296,10 @@ Ejemplo: un temario en la web de cátedra puede ser "Público = Sí", pero
 
 - Los datos de entrada existen porque los provee el propio usuario (barato de
   obtener, pero sólo en uso).
-- Temarios y parciales viejos son parcialmente accesibles públicamente.
+- El equipo reunió un banco de pruebas de 14 archivos de 3 cátedras y lo
+  inspeccionó (11/10/2026): confirma que el material que un estudiante tiene a
+  mano es procesable —los 13 PDF tenían capa de texto, sin necesidad de OCR— y
+  que mezcla material oficial con compilaciones de compañeros.
 
 #### De refutación
 
@@ -297,8 +307,13 @@ Ejemplo: un temario en la web de cátedra puede ser "Público = Sí", pero
   aprobó) no existe hoy y sólo aparece después de meses de uso; sin él no se
   puede medir éxito real ni mejorar la priorización.
 - Que la autoevaluación de nivel sea tan poco fiable que degrade todo el plan.
-- Que los temarios reales estén desactualizados o no publicados y no se puedan
-  usar para validar el peso de cada tema.
+- **Que el usuario no suba nada.** Al pasar el material a manos del usuario, el
+  producto queda expuesto a que llegue con el formulario vacío de archivos, o
+  con un PDF escaneado sin capa de texto. En el banco de pruebas eso no pasó
+  (13 de 13 legibles), pero el banco lo armó el equipo eligiendo qué incluir.
+- Que el material que el usuario sube esté tan desactualizado o incompleto como
+  el del banco de pruebas (rango 2015-2020), y el plan priorice sobre un
+  programa que ya no se dicta. El problema no desaparece: cambia de dueño.
 
 ---
 
@@ -443,3 +458,4 @@ de ética/sesgo (formato consolidado vs. desarrollo individual por sub-tipo de r
 |---|---|---|---|
 | 2026-09-25 | 1 | Versión inicial del canvas | Fede S. |
 | 2026-09-29 | 2 | Revisión de consistencia; resolución de dudas #1 a #7; marcado de pendientes con docente y alternativas con datos sintéticos | Marco P. |
+| 2026-10-11 | 3 | **Decisión de arquitectura: el material de cada materia lo sube el usuario**, el equipo no mantiene corpus. Reescrita la sección 5; `datos/` pasa a banco de pruebas. Proveedor de LLM acotado a ChatGPT o Claude | Fede S. |
