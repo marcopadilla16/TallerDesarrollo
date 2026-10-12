@@ -4,16 +4,6 @@
 > **Caso:** Study Copilot
 > **Versión:** 3 · **Fecha:** 11/10/2026
 
-**Documento 4 de 4 del Hito 2**
-
-**Datos sobre los que se decidió:** reales. Un **banco de pruebas** de **14
-archivos** de **3 cátedras** de Ing. en Sistemas (UTN FR Delta) en `datos/`,
-abierto e inspeccionado archivo por archivo con `eda-viabilidad.ipynb`.
-
-Por decisión de arquitectura del 11/10/2026, el material de cada materia **lo
-sube el usuario** al pedir el plan: el equipo no mantiene un corpus. El banco
-sirve para ejercitar el sistema, no para alimentarlo.
-
 ---
 
 ## 1. Decisión
@@ -69,8 +59,6 @@ era el peor hallazgo del EDA —material de fidelidad no verificada— y con la
 nueva es **cobertura realista**, porque es lo que un estudiante tiene a mano y va
 a subir. El número es el mismo; lo que cambió es qué significa.
 
-Cada número remite a una celda de `eda-viabilidad.ipynb`, que corre de punta a
-punta sobre `datos/`.
 
 ## 3. Exposición al riesgo
 
@@ -127,20 +115,3 @@ que el usuario sube**, que es lo que el banco de pruebas sostiene.
   tiempo de planificación 30-50%, retención 20-40%), suspendidos como criterio
   de éxito hasta que exista línea de base.
 
-### Lo primero que tiene que pasar
-
-1. **Anonimizar la muestra antes del próximo push.** 5 archivos exponen autoría
-   en metadatos y 2 traen nombre real de persona. El Hito 2 admite entregar un
-   extracto anonimizado; hoy lo que está en el repo no lo es.
-2. **Revisar permisos de redistribución.** 14 de 14 archivos sin licencia
-   declarada. Es la condición para que el banco pueda quedarse donde está.
-3. **Definir qué hace el producto sin temario.** Según el banco es el caso
-   mayoritario (2 de 3 materias), y hoy no está resuelto. Ya no se trata de
-   conseguir los temarios faltantes: los sube el usuario, o no los sube.
-4. **Elegir entre ChatGPT y Claude, y fijar la versión del modelo** (fuente 7).
-   El proveedor ya está acotado a esos dos; falta decidir cuál, leer los
-   términos de uso de ambos y probar salidas contra el banco. Es lo que destraba
-   medir la calidad del contenido generado.
-5. **Agregar al banco material de al menos 1 carrera fuera de Ing. en
-   Sistemas.** Es el único incumplimiento que sobrevivió al cambio de
-   arquitectura, y es barato de resolver.

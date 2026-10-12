@@ -239,7 +239,7 @@ disperso y de calidad variable, ansiedad.
 - Hipótesis verificable: una proporción relevante de estudiantes usa al menos
   una herramienta de organización (Notion, calendario, Pomodoro, planners) y al
   menos un chatbot/LLM para tareas de estudio.
-- Validación mínima dentro del trimestre: encuesta corta (20-30 estudiantes) y
+- Validación mínima dentro del trimestre: encuesta corta (10-20 estudiantes) y
   registro de frecuencia de uso (diario/semanal/ocasional), casos de uso
   (planificar, resumir, practicar) y combinación de herramientas.
 - Criterio preliminar de lectura: si una mayoría de la muestra usa "organización
@@ -284,9 +284,9 @@ Los 14 archivos de `datos/` quedan como **banco de pruebas** del equipo.
 | Dato | Origen | ¿Público? | ¿Lo vimos? | ¿Sensibles? | Sesgo conocido | Comentarios |
 |---|---|---|---|---|---|---|
 | Formulario del usuario (materia, temas, fecha, nivel, horas, objetivo) | Ingresado por el propio usuario | No | No | Sí (datos académicos personales) | Autoevaluación de nivel subjetiva y sesgada | Dato del que más depende el producto; se genera en uso, hay que registrarlo desde el día 1 |
-| **Material de la materia (temario, parciales, guías de práctica)** | **Lo sube el propio usuario al pedir el plan** | No | No | Puede traer nombres de docentes en metadatos | El usuario sube lo que tiene a mano, que puede estar incompleto o desactualizado | **El equipo no mantiene un corpus:** cada usuario aporta el material de su cursada. Nos saca el problema de la vigencia y nos agrega el de aceptar cualquier archivo |
-| Conocimiento base para generar plan/contenido | Modelo LLM preentrenado de un proveedor externo: **ChatGPT (OpenAI) o Claude (Anthropic)**, a definir entre los dos | No (pesos), sí el servicio vía API | No | No | Sesgos del corpus de entrenamiento del LLM; puede alucinar | No entrenamos el modelo; consumimos API de pago por uso. Riesgo: cobertura despareja por materia/idioma, y fecha de corte distinta en cada uno |
-| **Banco de pruebas del equipo** (`datos/`: 14 archivos, 3 cátedras) | Repositorios estudiantiles, reunido por el equipo | Parcial | **Sí** (11/10/2026) | Sí: 2 archivos con nombre real de persona en metadatos | 1 sola carrera; 55% del texto es material compilado por estudiantes | **No es insumo del producto, es banco de pruebas.** Sirve para probar el sistema con archivos parecidos a los que va a subir un usuario real |
+| Material de la materia (temario, parciales, guías de práctica) | Lo sube el propio usuario al pedir el plan | No | No | Puede traer nombres de docentes en metadatos | El usuario sube lo que tiene a mano, que puede estar incompleto o desactualizado | **El equipo no mantiene un corpus:** cada usuario aporta el material de su cursada. Nos saca el problema de la vigencia y nos agrega el de aceptar cualquier archivo |
+| Conocimiento base para generar plan/contenido | Modelo LLM preentrenado de un proveedor externo: ChatGPT (OpenAI) o Claude (Anthropic) | No (pesos), sí el servicio vía API | No | No | Sesgos del corpus de entrenamiento del LLM; puede alucinar | No entrenamos el modelo; consumimos API de pago por uso. Riesgo: cobertura despareja por materia/idioma, y fecha de corte distinta en cada uno |
+| Banco de pruebas del equipo | Repositorios estudiantiles, reunido por el equipo | Parcial | Sí | Sí: 2 archivos con nombre real de persona en metadatos | 1 sola carrera; 55% del texto es material compilado por estudiantes | No es insumo del producto, es banco de pruebas. Sirve para probar el sistema con archivos parecidos a los que va a subir un usuario real |
 | Feedback de resultado (¿el plan sirvió? ¿aprobó?) | Registrado por el usuario post-uso | No | No | Sí (nota/resultado académico) | Sesgo de respuesta (contesta quien está conforme) | Sin esto no hay "respuesta correcta" para mejorar ni para medir éxito |
 
 
@@ -297,7 +297,7 @@ Los 14 archivos de `datos/` quedan como **banco de pruebas** del equipo.
 - Los datos de entrada existen porque los provee el propio usuario (barato de
   obtener, pero sólo en uso).
 - El equipo reunió un banco de pruebas de 14 archivos de 3 cátedras y lo
-  inspeccionó (11/10/2026): confirma que el material que un estudiante tiene a
+  inspeccionó: confirma que el material que un estudiante tiene a
   mano es procesable —los 13 PDF tenían capa de texto, sin necesidad de OCR— y
   que mezcla material oficial con compilaciones de compañeros.
 

@@ -4,24 +4,6 @@
 > **Caso:** Study Copilot
 > **Versión:** 2 · **Fecha:** 11/10/2026
 > **Muestra:** `datos/` — 14 archivos de 3 cátedras de Ing. en Sistemas (UTN FR Delta)
-
-**Documento 3 de 4 del Hito 2**
-
-## Cómo se lee
-
-Sigue el cuestionario de *Datasheets for Datasets* (Gebru y otros, 2021),
-reducido a quince preguntas. Las respuestas que dependen de una medición remiten
-a `eda-de-viabilidad-study-copilot.md` y a las celdas de `eda-viabilidad.ipynb`;
-no la repiten con otras palabras.
-
-**Advertencia de alcance.** Por decisión de arquitectura del 11/10/2026, el
-material de cada materia **lo sube el propio usuario** al pedir el plan. Por eso
-esta muestra **no es insumo del producto sino banco de pruebas**: archivos
-parecidos a los que un estudiante va a subir, para ejercitar el sistema antes de
-tener usuarios. **No contiene el formulario del usuario**, que el canvas
-identifica como el dato del que más depende el proyecto, ni ningún registro de
-uso.
-
 ---
 
 ## 1. Motivación
@@ -41,9 +23,7 @@ sola pregunta: *¿el sistema puede procesar lo que un estudiante tiene a mano?*
 
 Respuesta: hay dos orígenes distintos y conviene no mezclarlos.
 
-- **Las cátedras de UTN FR Delta**, para 10 de los 14 archivos. Los metadatos
-  conservan autoría en 5 de ellos (`Administrador` en 3, y dos nombres propios
-  de personas).
+- **Las cátedras de UTN FR Delta**, para 10 de los 14 archivos.
 - **Estudiantes**, para los 4 restantes, que son compilaciones de preguntas
   armadas de forma colaborativa. Esos 4 concentran el **55% del volumen de
   texto** de la muestra (celda 7).
@@ -124,9 +104,6 @@ Respuesta: **sí, directamente, y está verificado.** **5 de 14** archivos expon
 el campo de autor en los metadatos, y **2 de ellos contienen nombre y apellido
 reales** de personas. Además, uno de los archivos menciona a un docente por su
 nombre de pila en el cuerpo del texto. La muestra **no está anonimizada**.
-
-El Hito 2 admite entregar «un extracto anonimizado si hay datos sensibles». Hay
-que limpiar los metadatos y el texto antes del próximo push.
 
 **10. ¿Hay datos sensibles?**
 

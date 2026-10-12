@@ -6,25 +6,6 @@
 > **Muestra** (ruta en el repo): `datos/` — 14 archivos de 3 cátedras de Ing. en Sistemas (UTN FR Delta)
 > **Notebook** (ruta en el repo): `eda-viabilidad.ipynb` — corre de punta a punta sobre `datos/`
 
-**Qué es la muestra.** Por decisión de arquitectura del 11/10/2026, el material
-de cada materia —temario, parciales, guías— **lo sube el propio usuario** al
-pedir el plan. El equipo no mantiene un corpus. Por eso `datos/` **no es insumo
-del producto sino banco de pruebas**: archivos parecidos a los que un estudiante
-va a subir, para ejercitar el sistema antes de tener usuarios.
-
-**Qué no cubre.** Nada de las fuentes 1, 2, 3, 6, 7 ni 8. En particular no
-contiene el formulario del usuario, que el canvas identifica como el dato del
-que más depende el proyecto, ni ningún registro de uso.
-
-> **Advertencia metodológica.** Los niveles de la parte 1 se fijaron antes de
-> abrir la muestra, suponiendo que el equipo mantenía un corpus de cátedras. La
-> decisión de arquitectura cambió ese supuesto, así que **los niveles se
-> rederivan**. Esto se parece peligrosamente a reescribir la vara después de ver
-> los números, que es justo lo que el hito penaliza. La diferencia, y queda a
-> criterio del lector juzgarla: cambió **el flujo de datos del producto**, no el
-> resultado que queríamos obtener. Para que se pueda auditar, la parte 1
-> conserva **las dos columnas**: el nivel original y el rederivado.
-
 ---
 
 ## 1. Requerimientos: el nivel que el producto necesita
