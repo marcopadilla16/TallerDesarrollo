@@ -481,7 +481,31 @@ que la PoC no construye.
 
 ### 3.2 Arquitectura
 
-*Pendiente (Clase 6).*
+```mermaid
+flowchart LR
+    U([Estudiante]) -->|formulario y archivos| I
+    subgraph App local en Streamlit
+        I["Interfaz<br/>Streamlit"]
+        IN["Ingesta<br/>pypdf, TXT"]
+        P["Procesamiento<br/>validación del formulario,<br/>casi-duplicados, registro JSON"]
+        M["Modelo<br/>workflow: prompt, validación,<br/>1 reintento"]
+    end
+    API[("API de OpenAI<br/>gpt-5.4-mini-2026-03-17")]
+    I --> IN --> P --> M
+    M <-->|JSON mode| API
+    M -->|JSON del plan| I
+    M --> R[("registro/<br/>un JSON por pedido")]
+    E["Evaluación<br/>script ≥30 planes + tests"] -.->|formularios sintéticos<br/>y datos/| IN
+    E -.->|lee| R
+```
+
+| Pieza | Qué es en este proyecto | Se construye o se usa hecha | Con qué (API, modelo preentrenado, librería) |
+|---|---|---|---|
+| **Ingesta** | Recibe el formulario y los archivos que sube el usuario en cada pedido, extrae el texto de cada PDF o TXT y rechaza con un mensaje lo que no se puede leer o tiene otro formato | Se usa hecha la lectura; se construyen las reglas de rechazo y los mensajes | `pypdf`; lectura de TXT de la librería estándar; subida de archivos de Streamlit |
+| **Procesamiento** | Valida el formulario, detecta casi-duplicados, arma el material entero que va al modelo y guarda el registro del pedido | Se construye | Código propio (Jaccard sobre vocabulario, umbral 0,30, celda 10); `json` de la librería estándar para el registro |
+| **Modelo o agente** | El workflow de 3.1.3: una llamada que devuelve el plan, las explicaciones y las preguntas en JSON, la validación por código y a lo sumo un reintento con los errores | Se usa hecho el modelo; se construyen los prompts, la validación y el reintento | API de OpenAI con el SDK `openai`, `gpt-5.4-mini-2026-03-17` en JSON mode; `python-dotenv` para `OPENAI_API_KEY` y `OPENAI_MODEL` |
+| **Interfaz** | Una app local donde un tercero completa el formulario, sube sus archivos y ve el plan por día, la explicación de cada tema, las preguntas de un tema como borrador y los mensajes de error | Se usa hecho el framework; se construyen las pantallas | Streamlit |
+| **Evaluación** | Un script que corre el workflow y el *baseline* sobre el conjunto congelado y mide validez, prioridad y ventaja contra los criterios de 2.3; tests automáticos de ingesta, validación y errores de la API; la rúbrica de las preguntas, a mano | Se construye | Código propio a partir de [`prueba_modelo.py`](../../experimentos/prueba_modelo.py), con la misma API y el mismo modelo; `pytest` para los tests |
 
 ---
 
