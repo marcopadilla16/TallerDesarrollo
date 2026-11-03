@@ -1,0 +1,1641 @@
+{
+  "fecha": "2026-11-02_2222",
+  "modelo": "gpt-4.1-mini-2025-04-14",
+  "repeticiones": 3,
+  "max_caracteres_material": 30000,
+  "ingesta": {
+    "gestion_de_datos": {
+      "caracteres": 19832,
+      "avisos": []
+    },
+    "investigacion_operativa": {
+      "caracteres": 29058,
+      "avisos": []
+    },
+    "redes": {
+      "caracteres": 29997,
+      "avisos": [
+        "redes/examenes/examen_01.pdf: recortado a 30000 de 54002 caracteres",
+        "redes/examenes/examen_02.pdf: afuera por el límite de 30000 caracteres",
+        "redes/practicas/practica_01.pdf: afuera por el límite de 30000 caracteres"
+      ]
+    }
+  },
+  "resumen": "| Variante | Planes válidos | Válidos al 1.er intento | Prioridad coherente | Errores de API | Segundos (media) | Tokens (media) |\n|---|---|---|---|---|---|---|\n| baseline | 1 de 9 | 1 de 9 | 7 de 9 | 0 | 5.0 | 9067 |\n| workflow | 9 de 9 | 7 de 9 | 3 de 9 | 0 | 5.9 | 11095 |",
+  "corridas": [
+    {
+      "formulario": "gd-con-temario",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "2026-11-11: tema que no está en el formulario (Modelo relacional y restricciones - repaso)",
+        "2026-11-14: tema que no está en el formulario (Revisión y práctica integradora (ejercicios de consultas, diseño y concurrencia))",
+        "2026-11-15: tema que no está en el formulario (Revisión general de todos los temas (enfoque en dudas y puntos débiles))",
+        "2026-11-15: tema que no está en el formulario (Práctica con problemas tipo examen y preguntas teóricas)",
+        "tema sin tiempo asignado: Modelo entidad-relación",
+        "tema sin explicación: Modelo entidad-relación"
+      ],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 6.9,
+      "tokens": 5999,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 60
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 90
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones - repaso",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              },
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-14",
+            "bloques": [
+              {
+                "tema": "Normalización",
+                "minutos": 90
+              },
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 90
+              },
+              {
+                "tema": "Revisión y práctica integradora (ejercicios de consultas, diseño y concurrencia)",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-15",
+            "bloques": [
+              {
+                "tema": "Revisión general de todos los temas (enfoque en dudas y puntos débiles)",
+                "minutos": 90
+              },
+              {
+                "tema": "Práctica con problemas tipo examen y preguntas teóricas",
+                "minutos": 90
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo relacional y restricciones": "Nivel medio de conocimiento y es fundamental para entender las bases del diseño de SGBD. Se le asignan tiempos moderados para reforzar y repasar.",
+          "Transacciones y concurrencia": "Nivel medio, son temas críticos para entender operación y seguridad en bases de datos. Se divide el estudio para consolidar conceptos y practicar.",
+          "SQL: consultas y subconsultas": "Nivel bajo, dado que es tema clave para el examen práctico y teórico, se le dedica tiempo considerable para avanzar y practicar activamente.",
+          "Normalización": "Nivel bajo, esencial para diseño eficiente de bases de datos. Se le asigna tiempo para que puedas comprender y aplicar conceptos básicos.",
+          "Revisión y práctica integradora (ejercicios de consultas, diseño y concurrencia)": "Es necesario integrar conocimientos y practicar de manera aplicada para consolidar y preparar para el examen real.",
+          "Revisión general de todos los temas (enfoque en dudas y puntos débiles)": "Último repaso general para reforzar conocimientos y clarificar dudas antes del examen.",
+          "Práctica con problemas tipo examen y preguntas teóricas": "Fundamental para entrenar el tipo de preguntas y formato del examen final, aumentando confianza y rendimiento."
+        }
+      },
+      "repeticion": 1
+    },
+    {
+      "formulario": "gd-con-temario",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": false,
+      "errores": [],
+      "prioridad_coherente": false,
+      "intentos": 2,
+      "segundos": 14.1,
+      "tokens": 12318,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 40
+              },
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 80
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 90
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 40
+              },
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 80
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-14",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 80
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 80
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              },
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 20
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-15",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 90
+              },
+              {
+                "tema": "Repaso general",
+                "minutos": 90
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo entidad-relación": "Se le dio un tiempo intermedio porque es nivel alto y se requiere menos tiempo para repasar con profundidad moderada.",
+          "Modelo relacional y restricciones": "Se reservó mayor tiempo que para temas de nivel alto debido a su nivel medio y la necesidad de profundidad adecuada para aprobar.",
+          "SQL: consultas y subconsultas": "Como es nivel bajo, se le asignó más tiempo para lograr comprensión sólida y práctica adecuada.",
+          "Normalización": "Se le asignó mucho tiempo por ser nivel bajo y fundamental para entender estructuras de base de datos.",
+          "Transacciones y concurrencia": "Se le destinó un tiempo intermedio acorde a su nivel medio para cubrir conceptos y prácticas esencialmente relevantes para aprobar."
+        }
+      },
+      "repeticion": 1
+    },
+    {
+      "formulario": "gd-con-temario",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "2026-11-14: tema que no está en el formulario (Repaso general: Modelo entidad-relación)",
+        "2026-11-14: tema que no está en el formulario (Repaso general y práctica de SQL)",
+        "2026-11-14: tema que no está en el formulario (Repaso general y resumen de Restricciones referenciales y DML/DDL)",
+        "2026-11-15: tema que no está en el formulario (Práctica intensiva de SQL: consultas y subconsultas)",
+        "2026-11-15: tema que no está en el formulario (Ejercicios: Restricciones referenciales y normalización)",
+        "2026-11-15: tema que no está en el formulario (Repaso de transacciones y concurrencia)",
+        "2026-11-14: 270 min planificados, 240 disponibles",
+        "tema sin tiempo asignado: Modelo entidad-relación"
+      ],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 6.2,
+      "tokens": 6021,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 90
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 120
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Normalización",
+                "minutos": 90
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-14",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 90
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              },
+              {
+                "tema": "Repaso general: Modelo entidad-relación",
+                "minutos": 60
+              },
+              {
+                "tema": "Repaso general y práctica de SQL",
+                "minutos": 30
+              },
+              {
+                "tema": "Repaso general y resumen de Restricciones referenciales y DML/DDL",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-15",
+            "bloques": [
+              {
+                "tema": "Práctica intensiva de SQL: consultas y subconsultas",
+                "minutos": 90
+              },
+              {
+                "tema": "Ejercicios: Restricciones referenciales y normalización",
+                "minutos": 60
+              },
+              {
+                "tema": "Repaso de transacciones y concurrencia",
+                "minutos": 30
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo relacional y restricciones": "Se asigna tiempo medio porque tienes nivel medio y es un tema fundamental para la base del examen.",
+          "Transacciones y concurrencia": "Se da un tiempo medio para consolidar ese tema en el que tienes nivel medio, que suele ser complejo y aparece en la evaluación.",
+          "SQL: consultas y subconsultas": "Dedico varios bloques porque tienes nivel bajo y es fundamental para aprobar, incluyendo práctica intensiva para familiarizarte con las consultas.",
+          "Normalización": "Tema con nivel bajo, por eso se le dedica tiempo moderado para entender conceptos clave sin sobrecargar, esencial para el examen.",
+          "Modelo entidad-relación": "Nivel alto, por eso se planifica solo un repaso general hacia el final para consolidar conocimientos y refrescar sin necesidad de muchas horas.",
+          "Repaso general y práctica": "Al final se reserva tiempo para repasar conceptos importantes, relacionar temas y resolver dudas concretas, imprescindible para aprobar.",
+          "Ejercicios de restricciones referenciales, DML/DDL": "Sumo tiempo para trabajar sobre estos puntos por la importancia en la evaluación y porque suelen generar dudas.",
+          "Práctica intensiva de SQL": "El mayor esfuerzo para SQL es en la recta final para ganar confianza en la sintaxis y lógica, clave para aprobar la materia."
+        }
+      },
+      "repeticion": 2
+    },
+    {
+      "formulario": "gd-con-temario",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": false,
+      "intentos": 1,
+      "segundos": 4.4,
+      "tokens": 5879,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 90
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 90
+              },
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              },
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-14",
+            "bloques": [
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 120
+              },
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 60
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 60
+              }
+            ],
+            "bloques_extra": [
+              {
+                "tema": "Repaso general",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-15",
+            "bloques": [
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 90
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 90
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo entidad-relación": "Tema de nivel alto, por eso tiene menos minutos pero distribuido para entender bien sus conceptos complejos.",
+          "Modelo relacional y restricciones": "Nivel medio, por eso se le asignan minutos intermedios para una buena comprensión.",
+          "SQL: consultas y subconsultas": "Nivel bajo, se le dio más tiempo para profundizar debido al objetivo de aprobar.",
+          "Normalización": "Nivel bajo, igual que SQL, requiere tiempo extra para entender bien conceptos básicos esenciales.",
+          "Transacciones y concurrencia": "Nivel medio, con tiempo intermedio para entender bien los conceptos críticos de concurrencia y transacciones."
+        }
+      },
+      "repeticion": 2
+    },
+    {
+      "formulario": "gd-con-temario",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "tema sin tiempo asignado: Modelo entidad-relación",
+        "tema sin explicación: Modelo entidad-relación"
+      ],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 5.3,
+      "tokens": 5862,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 60
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 120
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Normalización",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 60
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-13",
+            "bloques": []
+          },
+          {
+            "fecha": "2026-11-14",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 120
+              },
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 60
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-15",
+            "bloques": [
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 90
+              },
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 90
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo relacional y restricciones": "Tienes un nivel medio en este tema, por lo que se reserva un tiempo adecuado para repasarlo y profundizar conceptos clave relacionados con integridad y restricciones que suelen ser preguntas frecuentes en el examen.",
+          "Transacciones y concurrencia": "Dado que tienes un nivel medio, se te asigna suficiente tiempo para entender propiedades ACID, control de concurrencia y problemas comunes, que suelen ser aspectos importantes en evaluación.",
+          "SQL: consultas y subconsultas": "Como tienes un nivel bajo en SQL, que es crucial para la práctica y para entender cómo manipular y consultar datos, se dedica la mayor cantidad de tiempo a este bloque, distribuyendo sesiones para favorecer la asimilación progresiva.",
+          "Normalización": "Tema con nivel bajo, pero con menor peso en duración total porque requiere comprensión conceptual más que práctica extensa. Se van a realizar sesiones más cortas para evitar saturación y mantener enfoque al final de la preparación."
+        }
+      },
+      "repeticion": 3
+    },
+    {
+      "formulario": "gd-con-temario",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 4.9,
+      "tokens": 5949,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 30
+              },
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 60
+              },
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "SQL: consultas y subconsultas",
+                "minutos": 90
+              },
+              {
+                "tema": "Normalización",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Modelo relacional y restricciones",
+                "minutos": 60
+              },
+              {
+                "tema": "Transacciones y concurrencia",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-14",
+            "bloques": [
+              {
+                "tema": "Normalización",
+                "minutos": 90
+              },
+              {
+                "tema": "Modelo entidad-relación",
+                "minutos": 90
+              },
+              {
+                "tema": "Repaso general",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-15",
+            "bloques": [
+              {
+                "tema": "Repaso general",
+                "minutos": 180
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo entidad-relación": "Se asignó menos tiempo porque el nivel alto indica que se conoce bien, requiere repaso moderado.",
+          "Modelo relacional y restricciones": "Se asignó tiempo medio para reforzar conceptos debido a nivel medio.",
+          "SQL: consultas y subconsultas": "Se asignó mayor tiempo porque al ser nivel bajo se necesita mayor profundización.",
+          "Normalización": "Se asignó mayor tiempo por ser nivel bajo y requiere más estudio.",
+          "Transacciones y concurrencia": "Se asignó tiempo medio para consolidar conocimientos por nivel medio.",
+          "Repaso general": "Se reservaron bloques finales para integrar y revisar todos los temas antes del examen."
+        }
+      },
+      "repeticion": 3
+    },
+    {
+      "formulario": "io-sin-temario",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "2026-11-12: tema que no está en el formulario (Revisión general y práctica de ejercicios clave)",
+        "2026-11-13: tema que no está en el formulario (Revisión y resolución de ejercicios completos (simulación examen))"
+      ],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 4.9,
+      "tokens": 10567,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 90
+              },
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 60
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 60
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 60
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 60
+              },
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 30
+              },
+              {
+                "tema": "Revisión general y práctica de ejercicios clave",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-13",
+            "bloques": [
+              {
+                "tema": "Revisión y resolución de ejercicios completos (simulación examen)",
+                "minutos": 120
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Programación lineal: modelado": "Tienes un nivel medio, por lo que inicialmente no requiere tiempo excesivo, pero se le da un complemento para reforzar y evitar errores en el planteo.",
+          "Método simplex": "Nivel bajo, por eso se le asigna la mayor cantidad de tiempo al inicio para subir el nivel y practicar con varios ejemplos y problemas para entender las fases y el proceso.",
+          "Dualidad y análisis de sensibilidad": "Nivel bajo, se le da tiempo después del simplex para ir comprendiendo su relación y cómo se usa el análisis de sensibilidad aplicado.",
+          "Problemas de transporte y asignación": "Nivel alto, se les dedica apenas tiempo para mantener el nivel, refrescar conceptos clave y repasar detalles para no olvidar ante el examen.",
+          "Revisión general y práctica de ejercicios clave": "Día antes del examen para repasar puntos débiles, integrar conceptos y practicar con ejercicios tipo examen para afianzar.",
+          "Revisión y resolución de ejercicios completos (simulación examen)": "Dedicar un bloque largo a simular condiciones reales del examen con ejercicios integradores para ganar confianza y detectar fallas."
+        }
+      },
+      "repeticion": 1
+    },
+    {
+      "formulario": "io-sin-temario",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": false,
+      "intentos": 1,
+      "segundos": 4.6,
+      "tokens": 10585,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 90
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 120
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 135
+              },
+              {
+                "tema": "Método simplex",
+                "minutos": 45
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-13",
+            "bloques": [
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 60
+              },
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 60
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Programación lineal: modelado": "Se le asignó un tiempo medio porque el nivel es medio y se requiere un entendimiento claro para un buen desempeño.",
+          "Método simplex": "Se le asignó más tiempo inicialmente por su nivel bajo para fortalecer la comprensión de esta herramienta fundamental, y repaso adicional posterior.",
+          "Dualidad y análisis de sensibilidad": "Se le dedicó bastante tiempo ya que es un tema de nivel bajo y fundamental para el objetivo de nota superior a 8.",
+          "Problemas de transporte y asignación": "Se asignó menos tiempo relativo por ser nivel alto y con el objetivo de aprobar se trabaja con menor profundidad, pero se le presta atención.",
+          "Repaso general": "No se asignó bloque adicional de repaso porque el tiempo disponible ya se completó con los temas principales."
+        }
+      },
+      "repeticion": 1
+    },
+    {
+      "formulario": "io-sin-temario",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "2026-11-13: tema que no está en el formulario (Repaso general y resolución de ejercicios mixtos)"
+      ],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 3.9,
+      "tokens": 10438,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 90
+              },
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 60
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 60
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 60
+              },
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-13",
+            "bloques": [
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 60
+              },
+              {
+                "tema": "Repaso general y resolución de ejercicios mixtos",
+                "minutos": 60
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Programación lineal: modelado": "Tienes un nivel medio, se destina un tiempo moderado para afianzar la comprensión y preparación para aplicarlo en ejercicios.",
+          "Método simplex": "El nivel bajo justifica dedicarle varias sesiones intensas para entender paso a paso y practicar bastante, ya que es fundamental para el examen.",
+          "Dualidad y análisis de sensibilidad": "Nivel bajo también, por eso se asigna tiempo para aprender conceptos teóricos y prácticos básicos con ejercicios manuales y de software.",
+          "Problemas de transporte y asignación": "Nivel alto, por eso se asigna menos tiempo, enfocado a repasar casos complejos y asegurar precisión y velocidad en su resolución.",
+          "Repaso general y resolución de ejercicios mixtos": "Importante día para integrar contenidos y practicar combinación de temas, verificar dudas y consolidar los conocimientos antes del examen."
+        }
+      },
+      "repeticion": 2
+    },
+    {
+      "formulario": "io-sin-temario",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": false,
+      "intentos": 1,
+      "segundos": 4.0,
+      "tokens": 10530,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 90
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 120
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 90
+              },
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Repaso general",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-13",
+            "bloques": [
+              {
+                "tema": "Repaso general",
+                "minutos": 120
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Programación lineal: modelado": "Se le asignó un tiempo medio pues es de nivel medio y requiere comprensión y práctica.",
+          "Método simplex": "Tema de nivel bajo al que se le dedicó más tiempo para profundizar y asegurar el dominio fundamental del método.",
+          "Dualidad y análisis de sensibilidad": "Se asignó mucho tiempo por ser nivel bajo y fundamental para un buen puntaje, merece detalle.",
+          "Problemas de transporte y asignación": "Tema de nivel alto con menor tiempo asignado debido a que requiere menos profundización.",
+          "Repaso general": "Reservado para los últimos días para consolidar y reforzar todo el estudio de acuerdo al objetivo elevado."
+        }
+      },
+      "repeticion": 2
+    },
+    {
+      "formulario": "io-sin-temario",
+      "variante": "baseline",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": false,
+      "intentos": 1,
+      "segundos": 3.9,
+      "tokens": 10410,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 90
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 60
+              },
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 90
+              },
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 90
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-13",
+            "bloques": [
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 120
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Método simplex": "Dado que tu nivel es bajo, se destinó la mayor parte del tiempo inicial para comprender y practicar el método, ya que es fundamental para resolver programación lineal y para luego aplicar análisis de sensibilidad y dualidad.",
+          "Dualidad y análisis de sensibilidad": "También nivel bajo, por eso se reparte en dos días con tiempo suficiente para entender la teoría y poder hacer análisis manuales como los que aparecen en los materiales de cursada.",
+          "Programación lineal: modelado": "Con nivel medio, le dedico tiempo pero no tanto como simplex y dualidad, para reforzar aspectos de formulación que son clave y conectar con la resolución posterior.",
+          "Problemas de transporte y asignación": "Aunque tienes nivel alto, se deja para el final para repasar y consolidar, además el tiempo disponible es menor esos días. Se aprovecha para pulir detalles y practicar ejercicios más complejos y específicos."
+        }
+      },
+      "repeticion": 3
+    },
+    {
+      "formulario": "io-sin-temario",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 4.6,
+      "tokens": 10591,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Método simplex",
+                "minutos": 95
+              },
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 85
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 120
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Dualidad y análisis de sensibilidad",
+                "minutos": 80
+              },
+              {
+                "tema": "Método simplex",
+                "minutos": 100
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-12",
+            "bloques": [
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-13",
+            "bloques": [
+              {
+                "tema": "Programación lineal: modelado",
+                "minutos": 30
+              },
+              {
+                "tema": "Problemas de transporte y asignación",
+                "minutos": 80
+              },
+              {
+                "tema": "Repaso general",
+                "minutos": 10
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Programación lineal: modelado": "Nivel medio, asigné un tiempo intermedio para cubrir el modelado de problemas y su comprensión.",
+          "Método simplex": "Nivel bajo, por lo que asigné mayor tiempo para profundizar en entender y practicar el método clave para la resolución de programación lineal.",
+          "Dualidad y análisis de sensibilidad": "Nivel bajo, requiere tiempo considerable para entender conceptos y aplicaciones fundamentales del análisis de sensibilidad y dualidad.",
+          "Problemas de transporte y asignación": "Nivel alto, por ello asigné menor tiempo para repasar los conceptos y aplicación básica necesarios para el objetivo del examen.",
+          "Repaso general": "Cobertura final para reforzar todos los temas, aprovechando el tiempo disponible el último día."
+        }
+      },
+      "repeticion": 3
+    },
+    {
+      "formulario": "redes-ajustado",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "2026-11-11: tema que no está en el formulario (Capa de transporte: TCP y UDP (repaso y consolidación))",
+        "2026-11-11: tema que no está en el formulario (Direccionamiento IP y subredes (refuerzo))",
+        "2026-11-11: tema que no está en el formulario (Enrutamiento (refuerzo))",
+        "2026-11-11: tema que no está en el formulario (DNS y HTTP (repaso rápido))",
+        "tema sin tiempo asignado: Modelo OSI y TCP/IP",
+        "tema sin explicación: Modelo OSI y TCP/IP",
+        "tema sin tiempo asignado: DNS y HTTP"
+      ],
+      "prioridad_coherente": false,
+      "intentos": 1,
+      "segundos": 5.0,
+      "tokens": 10815,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Direccionamiento IP y subredes",
+                "minutos": 40
+              },
+              {
+                "tema": "Enrutamiento",
+                "minutos": 40
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 40
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Capa de transporte: TCP y UDP (repaso y consolidación)",
+                "minutos": 30
+              },
+              {
+                "tema": "Direccionamiento IP y subredes (refuerzo)",
+                "minutos": 30
+              },
+              {
+                "tema": "Enrutamiento (refuerzo)",
+                "minutos": 30
+              },
+              {
+                "tema": "DNS y HTTP (repaso rápido)",
+                "minutos": 30
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Direccionamiento IP y subredes": "El nivel bajo en este tema requiere dedicar el mayor tiempo posible para entender conceptos clave como clases de IP, máscaras, subnetting y su aplicación práctica, dado que es fundamental para la comprensión de enrutamiento.",
+          "Enrutamiento": "También bajo nivel, pero relacionado estrechamente con direccionamiento. Se necesita tiempo para entender tablas de enrutamiento, protocolos básicos y métricas, para poder responder preguntas y resolver ejercicios prácticos.",
+          "Capa de transporte: TCP y UDP": "Tienes un nivel medio, por eso se asigna tiempo para consolidar y repasar las características, diferencias, y usos concretos; también se distribuye parte del tiempo para repasar justo antes del examen para fortalecer la comprensión.",
+          "Capa de enlace y Ethernet": "También etapa media, enfoque en protocolos de acceso al medio, estructura de tramas, dominios de colisión y broadcast, y mecanismos de control, importantes para entender el funcionamiento básico de la comunicación local.",
+          "DNS y HTTP": "Nivel alto, por lo que se propone una revisión rápida final para asegurar los conceptos clave, principalmente protocolos y su funcionamiento dentro de la capa de aplicación; se asume que el estudio previo está consolidado."
+        }
+      },
+      "repeticion": 1
+    },
+    {
+      "formulario": "redes-ajustado",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 4.0,
+      "tokens": 10825,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Direccionamiento IP y subredes",
+                "minutos": 54
+              },
+              {
+                "tema": "Enrutamiento",
+                "minutos": 48
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 18
+              }
+            ],
+            "minutos_totales": 120
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 36
+              },
+              {
+                "tema": "Modelo OSI y TCP/IP",
+                "minutos": 12
+              },
+              {
+                "tema": "DNS y HTTP",
+                "minutos": 12
+              }
+            ],
+            "minutos_totales": 60
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Modelo OSI y TCP/IP",
+                "minutos": 48
+              },
+              {
+                "tema": "DNS y HTTP",
+                "minutos": 24
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 24
+              },
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 24
+              }
+            ],
+            "minutos_totales": 120
+          }
+        ],
+        "explicaciones": {
+          "Modelo OSI y TCP/IP": "Se asignaron minutos moderados por ser un tema de nivel alto que requiere menos detalle.",
+          "Direccionamiento IP y subredes": "Se le dedicó más tiempo debido a que es un tema de nivel bajo que necesita mayor profundización.",
+          "Enrutamiento": "Recibió mucho tiempo por ser un tema bajo que requiere explicación detallada.",
+          "Capa de transporte: TCP y UDP": "Tiempo moderado por ser nivel medio, equilibrando entre detalle y síntesis.",
+          "Capa de enlace y Ethernet": "Tiempo medio asignado acorde a nivel medio para cubrir aspectos principales.",
+          "DNS y HTTP": "Menor tiempo por nivel alto, con repaso para asegurar comprensión."
+        }
+      },
+      "repeticion": 1
+    },
+    {
+      "formulario": "redes-ajustado",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "2026-11-11: tema que no está en el formulario (Repaso General: Modelo OSI y TCP/IP, DNS y HTTP)",
+        "tema sin tiempo asignado: Modelo OSI y TCP/IP",
+        "tema sin explicación: Modelo OSI y TCP/IP",
+        "tema sin tiempo asignado: DNS y HTTP",
+        "tema sin explicación: DNS y HTTP"
+      ],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 4.5,
+      "tokens": 10787,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Direccionamiento IP y subredes",
+                "minutos": 50
+              },
+              {
+                "tema": "Enrutamiento",
+                "minutos": 45
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 25
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 40
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 20
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Direccionamiento IP y subredes",
+                "minutos": 40
+              },
+              {
+                "tema": "Enrutamiento",
+                "minutos": 30
+              },
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 30
+              },
+              {
+                "tema": "Repaso General: Modelo OSI y TCP/IP, DNS y HTTP",
+                "minutos": 20
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Direccionamiento IP y subredes": "Se asigna un tiempo relevante porque tienes nivel bajo y suele ser un tema complejo y fundamental para el resto del curso, por eso necesita repaso profundo.",
+          "Enrutamiento": "Aunque también es nivel bajo, dedicamos un tiempo importante porque es esencial entenderlo para el examen y mejorar tu comprensión desde lo básico.",
+          "Capa de transporte: TCP y UDP": "Tu nivel es medio, pero es clave ya que conecta con otros temas como HTTP y DNS, por eso distribuyo tiempo en varios días para reforzar conceptos.",
+          "Capa de enlace y Ethernet": "Nivel medio, se refuerza para consolidar conceptos que son base para el nivel superior, además que conecta con capa física y dominio de colisiones y broadcast.",
+          "Repaso General: Modelo OSI y TCP/IP, DNS y HTTP": "Estos temas los tienes en nivel alto y se reservó poco tiempo para repasar puntos clave y resolver dudas o afianzar rápido antes del examen."
+        }
+      },
+      "repeticion": 2
+    },
+    {
+      "formulario": "redes-ajustado",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": false,
+      "errores": [],
+      "prioridad_coherente": false,
+      "intentos": 2,
+      "segundos": 8.7,
+      "tokens": 22389,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Direccionamiento IP y subredes",
+                "minutos": 45
+              },
+              {
+                "tema": "Enrutamiento",
+                "minutos": 45
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 30
+              },
+              {
+                "tema": "Modelo OSI y TCP/IP",
+                "minutos": 30
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "DNS y HTTP",
+                "minutos": 60
+              },
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 30
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 30
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo OSI y TCP/IP": "El nivel alto para este tema indica que necesita menor tiempo para repasar conceptos ya dominados.",
+          "Direccionamiento IP y subredes": "El nivel bajo requiere más minutos para entender y practicar en detalle el tema fundamental de direccionamiento.",
+          "Enrutamiento": "Al ser nivel bajo, se le asignó tiempo suficiente para abordar con profundidad los conceptos y algoritmos claves.",
+          "Capa de transporte: TCP y UDP": "Nivel medio requiere un tiempo moderado para afianzar conocimientos sobre protocolos esenciales de transporte.",
+          "Capa de enlace y Ethernet": "Nivel medio asigna minutos suficientes para repasar aspectos técnicos y diferencias fundamentales.",
+          "DNS y HTTP": "Nivel alto permite dedicar menos minutos ya que los conceptos suelen ser más conocidos, aunque importantes para el examen."
+        }
+      },
+      "repeticion": 2
+    },
+    {
+      "formulario": "redes-ajustado",
+      "variante": "baseline",
+      "valido": false,
+      "valido_primer_intento": false,
+      "errores": [
+        "2026-11-11: tema que no está en el formulario (Direccionamiento IP y subredes (repaso y ejercicios))",
+        "2026-11-11: tema que no está en el formulario (Enrutamiento (repaso y ejercicios))",
+        "tema sin tiempo asignado: Modelo OSI y TCP/IP",
+        "tema sin explicación: Modelo OSI y TCP/IP",
+        "tema sin tiempo asignado: DNS y HTTP",
+        "tema sin explicación: DNS y HTTP"
+      ],
+      "prioridad_coherente": true,
+      "intentos": 1,
+      "segundos": 4.1,
+      "tokens": 10707,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Direccionamiento IP y subredes",
+                "minutos": 60
+              },
+              {
+                "tema": "Enrutamiento",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 60
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 60
+              },
+              {
+                "tema": "Direccionamiento IP y subredes (repaso y ejercicios)",
+                "minutos": 30
+              },
+              {
+                "tema": "Enrutamiento (repaso y ejercicios)",
+                "minutos": 30
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Direccionamiento IP y subredes": "Es tu tema de nivel bajo, por eso requiere un tiempo considerable para reforzar conceptos y practicar subredes, ya que es fundamental y suele ser tema frecuente en exámenes.",
+          "Enrutamiento": "Nivel bajo, necesita refuerzo para entender la lógica y tipos de enrutamiento y familiarizarte con algoritmos básicos; además, hacer ejercicios para interiorizar la teoría.",
+          "Capa de transporte: TCP y UDP": "Nivel medio, importante por la característica diferencial de los protocolos y su comportamiento; se dedica una hora para estudiar aspectos clave y ejemplos.",
+          "Capa de enlace y Ethernet": "Nivel medio, importante para comprender cómo se transmite la información en la capa física y sus protocolos, se dedica un bloque entero para cubrir teoría y posibles preguntas de examen.",
+          "Direccionamiento IP y subredes (repaso y ejercicios)": "Refuerzo final para asegurar comprensión y aplicación práctica antes del examen.",
+          "Enrutamiento (repaso y ejercicios)": "Práctica y consolidación final para estar seguro de los mecanismos y protocolos."
+        }
+      },
+      "repeticion": 3
+    },
+    {
+      "formulario": "redes-ajustado",
+      "variante": "workflow",
+      "valido": true,
+      "valido_primer_intento": true,
+      "errores": [],
+      "prioridad_coherente": false,
+      "intentos": 1,
+      "segundos": 3.5,
+      "tokens": 10789,
+      "respuesta": {
+        "plan": [
+          {
+            "fecha": "2026-11-09",
+            "bloques": [
+              {
+                "tema": "Direccionamiento IP y subredes",
+                "minutos": 50
+              },
+              {
+                "tema": "Enrutamiento",
+                "minutos": 50
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 20
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-10",
+            "bloques": [
+              {
+                "tema": "Capa de enlace y Ethernet",
+                "minutos": 40
+              },
+              {
+                "tema": "Capa de transporte: TCP y UDP",
+                "minutos": 20
+              }
+            ]
+          },
+          {
+            "fecha": "2026-11-11",
+            "bloques": [
+              {
+                "tema": "DNS y HTTP",
+                "minutos": 50
+              },
+              {
+                "tema": "Modelo OSI y TCP/IP",
+                "minutos": 40
+              },
+              {
+                "tema": "Repaso general",
+                "minutos": 30
+              }
+            ]
+          }
+        ],
+        "explicaciones": {
+          "Modelo OSI y TCP/IP": "Nivel alto, por ende se dedicó tiempo moderado para repasar conceptos avanzados.",
+          "Direccionamiento IP y subredes": "Nivel bajo, se le asignó mucho tiempo para fortalecer los fundamentos.",
+          "Enrutamiento": "Nivel bajo, se destinó tiempo amplio para profundizar en definición y práctica.",
+          "Capa de transporte: TCP y UDP": "Nivel medio, el tiempo asignado es intermedio para abordar control y diferencias.",
+          "Capa de enlace y Ethernet": "Nivel medio, se esforzó tiempo adecuado para entender protocolos y acceso al medio.",
+          "DNS y HTTP": "Nivel alto, se destinó tiempo moderado para repasar funcionamiento y protocolos relacionados.",
+          "Repaso general": "Se reservó un bloque final para consolidar todos los temas, si alcanzó tiempo."
+        }
+      },
+      "repeticion": 3
+    }
+  ]
+}

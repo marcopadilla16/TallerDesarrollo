@@ -2,3 +2,5 @@ pypdf
 pandas
 matplotlib
 jupyter
+openai
+python-dotenv

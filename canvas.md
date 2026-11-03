@@ -3,7 +3,7 @@
 > **Equipo:** …
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 3 · **Fecha:** 11/10/2026
+> **Versión:** 4 · **Fecha:** 27/10/2026
 
 ## Cómo se usa
 
@@ -131,11 +131,14 @@ Qué se pretende medir con ese mínimo viable:
 
 Plataforma web donde el estudiante completa un formulario con **materia, temas,
 fecha de examen, nivel autoevaluado por tema, tiempo disponible por día y
-objetivo** (aprobar / sacar más de 8 / preparar final). Con eso el sistema
+objetivo** (aprobar / sacar más de 8 / preparar final), y **sube el material de
+su cursada** (temario si lo tiene, parciales, guías). Con eso el sistema
 genera un **plan de estudio personalizado** (qué estudiar, cuándo y cuánto
-tiempo), con una **explicación** de por qué priorizó cada tema. Opcionalmente, el
-usuario pide **material adicional**: resumen, ejercicios tipo parcial y preguntas
-de autoevaluación.
+tiempo), con una **explicación** de por qué priorizó cada tema y la **fecha del
+material** que usó (o el aviso de que no se pudo determinar). Opcionalmente, el
+usuario pide **material adicional** apoyado en sus archivos: resumen, ejercicios
+tipo parcial y preguntas de autoevaluación, que se presentan como borrador a
+revisar.
 
 Casos de uso principales:
 
@@ -147,8 +150,13 @@ Criterios de aceptación (hipótesis): el plan cubre todos los temas ingresados,
 respeta las horas disponibles declaradas, prioriza de forma coherente con
 nivel + fecha + objetivo, y la explicación es entendible.
 
+La priorización se apoya en nivel declarado, fecha, horas y objetivo, **no en
+el peso real de cada tema**: requiere temario, y en el banco de pruebas 2 de 3
+materias no lo tienen (veredicto del Hito 2).
+
 Supuestos: el usuario ingresa datos honestos (nivel, tiempo); la calidad
-generada por el LLM es suficiente para ser útil sin revisión experta.
+generada por el LLM es suficiente para ser útil **con revisión humana**: el
+material generado nunca se presenta como verificado.
 
 ### Acción
 
@@ -158,7 +166,8 @@ El estudiante decide distinto cómo asignar sus horas de estudio antes de un exa
 
 Lo que haría falta saber para tomar mejor esa decisión: **qué asignación de
 tiempo por tema maximiza el resultado esperado en el examen**, dado el nivel
-actual, la dificultad/peso de cada tema y las horas disponibles. En la versión
+declarado por tema, la cercanía del examen, el objetivo y las horas
+disponibles. En la versión
 LLM, la "predicción" es una recomendación generativa de priorización + la
 generación de contenido pertinente (resúmenes/ejercicios ajustados al tema y
 nivel).
@@ -192,8 +201,13 @@ Cómo se valoran resultados y errores, y quién lo pone:
   plan (siga su intuición igual). Entonces el sistema no cambia nada.
 - Que la calidad del contenido generado no alcance sin revisión experta, y el
   usuario deba corregirlo tanto que no ahorre tiempo.
-- Que una regla simple (repartir horas proporcional a "peso × (1 − nivel)")
-  dé un plan casi tan bueno como el LLM: entonces gran parte no necesita modelo.
+- Que una regla simple (repartir horas proporcional a "1 − nivel", sin dejar
+  ningún tema en cero) dé un plan casi tan bueno como el LLM: entonces gran
+  parte no necesita modelo.
+- Que una sola llamada genérica a un chatbot (lo que el estudiante ya hace hoy,
+  Sección 4) dé un plan casi tan bueno como el producto: entonces el producto no
+  agrega nada sobre el statu quo. Es el supuesto que pone a prueba la PoC
+  (`docs/hito_3/definicion-de-la-poc.md`, 1.2).
 
 ---
 
@@ -459,3 +473,4 @@ de ética/sesgo (formato consolidado vs. desarrollo individual por sub-tipo de r
 | 2026-09-25 | 1 | Versión inicial del canvas | Fede S. |
 | 2026-09-29 | 2 | Revisión de consistencia; resolución de dudas #1 a #7; marcado de pendientes con docente y alternativas con datos sintéticos | Marco P. |
 | 2026-10-11 | 3 | **Decisión de arquitectura: el material de cada materia lo sube el usuario**, el equipo no mantiene corpus. Reescrita la sección 5; `datos/` pasa a banco de pruebas. Proveedor de LLM acotado a ChatGPT o Claude | Fede S. |
+| 2026-10-27 | 4 | Sección 3 alineada al veredicto del Hito 2 y a la definición de la PoC: el usuario sube su material, la priorización no usa el peso real de los temas, el material generado va con revisión humana, la regla de refutación sin peso y el *baseline* de llamada única como refutación explícita. Proveedor de LLM: ChatGPT (OpenAI), única API disponible | Marco P. |
