@@ -62,7 +62,8 @@ notebook. El enunciado de la cátedra para el Hito 2 está en
 .
 ├── README.md
 ├── CLAUDE.md                 # Reglas de trabajo: coherencia entre documentos
-├── .claude/commands/         # Comandos del proyecto (ver /help-project)
+├── .claude/commands/         # Comandos del proyecto para Claude Code (ver /help-project)
+├── .github/prompts/          # Los mismos comandos para Copilot en VS Code
 ├── propuesta.md              # Idea inicial del proyecto
 ├── canvas.md                 # AI Opportunity Canvas (documento vivo)
 ├── eda-viabilidad.ipynb      # Notebook del EDA (Hito 2)
