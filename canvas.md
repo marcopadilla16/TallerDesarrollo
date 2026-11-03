@@ -1,9 +1,9 @@
 # AI Opportunity Canvas
 
-> **Equipo:** …
+> **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 4 · **Fecha:** 27/10/2026
+> **Versión:** 5 · **Fecha:** 03/11/2026
 
 ## Cómo se usa
 
@@ -14,10 +14,11 @@ equipo como `canvas.md`. Es un documento vivo, se revisa cada vez que cambia alg
 
 - **Confirmado (preliminar):** existe señal de problema de priorización y de
   uso de herramientas parciales (organización + recursos sueltos).
-- **En validación:** magnitud del problema, adopción real en el segmento
-  objetivo, y umbrales de éxito de la PoC.
-- **Pendiente docente:** criterios finales de corte para métricas y alcance
-  esperado de detalle en proxies técnicas y riesgos éticos.
+- **En validación:** magnitud del problema y adopción real en el segmento
+  objetivo.
+- **Suspendido:** los umbrales de la sección 6, por falta de línea de base
+  (veredicto del Hito 2). La PoC se valida contra los criterios de aceptación de
+  `docs/hito_3/definicion-de-la-poc.md`, sección 2.3.
 - **Alternativa metodológica:** cuando no haya trabajo de campo en esta etapa,
   se usarán datos sintéticos sólo para diseñar instrumentos y probar
   sensibilidad, **no** para validar hipótesis en población real.
@@ -107,7 +108,7 @@ Qué se pretende medir con ese mínimo viable:
 | Recomendador | Docentes / ayudantes que sugieren herramientas de estudio | Que no fomente hacer trampa ni reemplace el aprendizaje; que el contenido no tenga errores conceptuales |
 | Comprador | El propio estudiante (si es freemium/pago individual) | Que el valor justifique el precio frente a alternativas gratuitas |
 | Decisor | El propio estudiante | Igual que usuario y comprador (roles unificados en B2C) |
-| Saboteador | Docente que ve riesgo de dependencia/copia; o el propio hábito de estudio ya instalado |  |
+| Saboteador | Docente que ve riesgo de dependencia/copia; o el propio hábito de estudio ya instalado | Docente: que no reemplace la comprensión del contenido y muestre el porqué de cada prioridad. Hábito: que planificar con el producto cueste menos que hacerlo como siempre |
 
 
 ### Evidencia
@@ -299,7 +300,7 @@ Los 14 archivos de `datos/` quedan como **banco de pruebas** del equipo.
 |---|---|---|---|---|---|---|
 | Formulario del usuario (materia, temas, fecha, nivel, horas, objetivo) | Ingresado por el propio usuario | No | No | Sí (datos académicos personales) | Autoevaluación de nivel subjetiva y sesgada | Dato del que más depende el producto; se genera en uso, hay que registrarlo desde el día 1 |
 | Material de la materia (temario, parciales, guías de práctica) | Lo sube el propio usuario al pedir el plan | No | No | Puede traer nombres de docentes en metadatos | El usuario sube lo que tiene a mano, que puede estar incompleto o desactualizado | **El equipo no mantiene un corpus:** cada usuario aporta el material de su cursada. Nos saca el problema de la vigencia y nos agrega el de aceptar cualquier archivo |
-| Conocimiento base para generar plan/contenido | Modelo LLM preentrenado de un proveedor externo: ChatGPT (OpenAI) o Claude (Anthropic) | No (pesos), sí el servicio vía API | No | No | Sesgos del corpus de entrenamiento del LLM; puede alucinar | No entrenamos el modelo; consumimos API de pago por uso. Riesgo: cobertura despareja por materia/idioma, y fecha de corte distinta en cada uno |
+| Conocimiento base para generar plan/contenido | Modelo LLM preentrenado de un proveedor externo: OpenAI, `gpt-5.4-mini-2026-03-17` (`docs/hito_3/definicion-de-la-poc.md`, 3.1.1) | No (pesos), sí el servicio vía API | Sí (salidas de la prueba en `experimentos/`) | No | Sesgos del corpus de entrenamiento del LLM; puede alucinar | No entrenamos el modelo; consumimos API de pago por uso. Riesgo: cobertura despareja por materia/idioma, y fecha de corte del modelo |
 | Banco de pruebas del equipo | Repositorios estudiantiles, reunido por el equipo | Parcial | Sí | Sí: 2 archivos con nombre real de persona en metadatos | 1 sola carrera; 55% del texto es material compilado por estudiantes | No es insumo del producto, es banco de pruebas. Sirve para probar el sistema con archivos parecidos a los que va a subir un usuario real |
 | Feedback de resultado (¿el plan sirvió? ¿aprobó?) | Registrado por el usuario post-uso | No | No | Sí (nota/resultado académico) | Sesgo de respuesta (contesta quien está conforme) | Sin esto no hay "respuesta correcta" para mejorar ni para medir éxito |
 
@@ -341,27 +342,30 @@ plan)
 (retención = señal de que sirvió)
 * tiempo dedicado a **planificar** antes vs. después (debe bajar).
 
-### Umbral preliminar (a validar)
+### Umbral preliminar (suspendido)
 
-Estos valores se usan como objetivo inicial de trabajo para el trimestre. No son
-definitivos: se validan con docente, línea de base y resultados de la prueba
-piloto.
-
-**PENDIENTE DOCENTE:** validar estos rangos preliminares y el criterio de corte
-de "no vale la pena" para evitar umbrales arbitrarios.
+**Suspendidos por el veredicto del Hito 2** hasta que exista línea de base: sin
+ella, estos valores son números inventados. No son criterio de éxito de la PoC,
+que se valida contra los criterios de aceptación de
+`docs/hito_3/definicion-de-la-poc.md`, sección 2.3. Se conservan como registro de
+lo que el equipo esperaba antes de ver los datos.
 
 - Adherencia al plan: objetivo preliminar entre 50% y 70% de las sesiones planificadas.
 - Reducción del tiempo de planificación: objetivo preliminar entre 30% y 50% respecto de la línea de base.
 - Retención: objetivo preliminar entre 20% y 40% de usuarios que vuelven a usarlo para un segundo examen.
 
-**ALTERNATIVA DATOS SINTETICOS:** si no se llega a medir estos umbrales con
+**ALTERNATIVA DATOS SINTETICOS (suspendida junto con los umbrales):** si no se llega a medir estos umbrales con
 trabajo de campo en esta etapa, se usan escenarios sintéticos
 (conservador/intermedio/exigente) sólo para análisis de sensibilidad y ajuste
 del criterio, no para validar impacto real.
 
 ### Cómo se mediría dentro del trimestre, aunque sea de forma aproximada
 
-- Encuesta corta post-examen a usuarios de la PoC: ¿seguiste el plan? ¿cuánto
+**Suspendido junto con los umbrales:** la PoC no sale a usuarios, así que esta
+encuesta queda para la prueba de uso que habilita el GO
+(`docs/hito_3/definicion-de-la-poc.md`, 1.2).
+
+- Encuesta corta post-examen a usuarios del producto: ¿seguiste el plan? ¿cuánto
   tardaste en organizarte antes vs. con la app? ¿lo volverías a usar?
 
 ### Métrica técnica que usaríamos como proxy
@@ -382,8 +386,8 @@ en esta etapa, se puede usar un set de casos sintéticos etiquetados (planes
 esperables vs. defectuosos) para probar la métrica y el validador, dejando
 explícito que no sustituye validación en uso real.
 
-**PENDIENTE DOCENTE:** confirmar si estas proxies técnicas y su nivel de detalle
-cumplen con lo esperado por la consigna de la cátedra.
+La forma verificable de estas proxies para la PoC, con sus umbrales, se fija en
+los criterios de aceptación de `docs/hito_3/definicion-de-la-poc.md`, sección 2.3.
 
 ### Qué se registra de cada uso
 
@@ -445,9 +449,6 @@ Regulación: educación es un dominio sensible; antes de escalar conviene revisa
 normativa de protección de datos personales aplicable a estudiantes (incluyendo
 casos de menores de edad).
 
-**PENDIENTE DOCENTE:** confirmar el alcance mínimo esperado para esta sección
-de ética/sesgo (formato consolidado vs. desarrollo individual por sub-tipo de riesgo).
-
 ### Evidencia
 
 #### De confirmación
@@ -474,3 +475,4 @@ de ética/sesgo (formato consolidado vs. desarrollo individual por sub-tipo de r
 | 2026-09-29 | 2 | Revisión de consistencia; resolución de dudas #1 a #7; marcado de pendientes con docente y alternativas con datos sintéticos | Marco P. |
 | 2026-10-11 | 3 | **Decisión de arquitectura: el material de cada materia lo sube el usuario**, el equipo no mantiene corpus. Reescrita la sección 5; `datos/` pasa a banco de pruebas. Proveedor de LLM acotado a ChatGPT o Claude | Fede S. |
 | 2026-10-27 | 4 | Sección 3 alineada al veredicto del Hito 2 y a la definición de la PoC: el usuario sube su material, la priorización no usa el peso real de los temas, el material generado va con revisión humana, la regla de refutación sin peso y el *baseline* de llamada única como refutación explícita. Proveedor de LLM: ChatGPT (OpenAI), única API disponible | Marco P. |
+| 2026-11-03 | 5 | Cierre del Hito 1. Se quitan las marcas de pendientes con el docente, que nunca se presentaron: las resuelven el veredicto del Hito 2 y la definición de la PoC. Umbrales y encuesta de la sección 6 marcados como suspendidos, con referencia al veredicto. Se completan el nombre del equipo y el saboteador, y el proveedor pasa a OpenAI con el modelo elegido. **Sin tags nuevos: estos cierres se suben como parte del Hito 3** | Marco P. |
