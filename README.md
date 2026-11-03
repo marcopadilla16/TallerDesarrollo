@@ -62,6 +62,7 @@ notebook. El enunciado de la cátedra para el Hito 2 está en
 .
 ├── README.md
 ├── CLAUDE.md                 # Reglas de trabajo: coherencia entre documentos
+├── .claude/commands/         # Comandos del proyecto (ver /help-project)
 ├── propuesta.md              # Idea inicial del proyecto
 ├── canvas.md                 # AI Opportunity Canvas (documento vivo)
 ├── eda-viabilidad.ipynb      # Notebook del EDA (Hito 2)
