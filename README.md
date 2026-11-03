@@ -26,7 +26,8 @@ Todavía no contiene código del producto.
 |---|---|---|
 | #1 | Propuesta y AI Opportunity Canvas (v2) | Tag `v1.0` |
 | #2 | Mapa de fuentes | Commit `2e69bc9` (sin tag) |
-| #3 | Hito 2: muestra, EDA de viabilidad, datasheet y veredicto (**decisión: ajustar el alcance**). Canvas actualizado a v3 | Esta entrega |
+| #3 | Hito 2: muestra, EDA de viabilidad, datasheet y veredicto (**decisión: ajustar el alcance**). Canvas actualizado a v3 | Tag `v2.0` |
+| #4 | Hito 3: definición de la PoC, **en curso**. Incluye los cierres del Hito 1 en el canvas (v5), sin tags nuevos | Sin tag todavía |
 
 **En una línea:** el EDA mostró que el material disponible alcanza para construir
 y probar el sistema, pero no para priorizar temas por su peso real (2 de 3
@@ -49,6 +50,7 @@ anterior.
 | 5 | [eda-viabilidad.ipynb](eda-viabilidad.ipynb) | Los números del EDA: una celda por propiedad y por tipo de *leakage* |
 | 6 | [Datasheet](docs/hito_2/3-datasheet.md) | Qué se sabe y qué no de la muestra (formato *Datasheets for Datasets*) |
 | 7 | [Veredicto](docs/hito_2/4-veredicto.md) | La decisión, sus fundamentos, la exposición al riesgo y el nuevo alcance |
+| 8 | [Definición de la PoC](docs/hito_3/definicion-de-la-poc.md) | Qué se construye, cómo se valida y con qué modelo. En curso |
 
 Cada número citado en el EDA y en el veredicto remite a una celda concreta del
 notebook. El enunciado de la cátedra para el Hito 2 está en
@@ -59,21 +61,29 @@ notebook. El enunciado de la cátedra para el Hito 2 está en
 ```
 .
 ├── README.md
+├── CLAUDE.md                 # Reglas de trabajo: coherencia entre documentos
+├── .claude/commands/         # Comandos del proyecto (ver /help-project)
 ├── propuesta.md              # Idea inicial del proyecto
 ├── canvas.md                 # AI Opportunity Canvas (documento vivo)
 ├── eda-viabilidad.ipynb      # Notebook del EDA (Hito 2)
 ├── requirements.txt
+├── .env.example              # Variables para experimentos/ (copiar a .env)
 ├── datos/                    # Muestra: 14 archivos, 3 materias de Ing. en Sistemas
 │   └── ing_sistemas/<materia>/{examenes,practicas,temario}/
+├── experimentos/             # Prueba del modelo (baseline vs. workflow) y resultados
 └── docs/
+    ├── decisiones-de-proceso.md  # Exploraciones de proceso, insumo del informe final
     ├── hito_1/
     │   └── ai-opportunity-canvas.pdf
-    └── hito_2/
-        ├── ENUNCIADO.md      # Consigna de la cátedra
-        ├── 1-mapa-de-fuentes.md
-        ├── 2-eda-de-viabilidad.md
-        ├── 3-datasheet.md
-        └── 4-veredicto.md
+    ├── hito_2/
+    │   ├── ENUNCIADO.md      # Consigna de la cátedra
+    │   ├── 1-mapa-de-fuentes.md
+    │   ├── 2-eda-de-viabilidad.md
+    │   ├── 3-datasheet.md
+    │   └── 4-veredicto.md
+    └── hito_3/
+        ├── README.md         # Consigna de la cátedra
+        └── definicion-de-la-poc.md
 ```
 
 ## Cómo reproducir el EDA
@@ -109,5 +119,5 @@ Surgen del [mapa de fuentes](docs/hito_2/1-mapa-de-fuentes.md), el
 - [ ] Anonimizar la muestra (5 archivos con autoría en metadatos, 2 con nombre real).
 - [ ] Consultar permisos de redistribución a las cátedras (14 de 14 sin licencia declarada).
 - [ ] Definir el comportamiento del producto cuando el usuario no sube temario.
-- [ ] Elegir proveedor de LLM (ChatGPT o Claude) y fijar la versión del modelo.
+- [x] Elegir proveedor de LLM y fijar la versión del modelo: OpenAI, `gpt-5.4-mini-2026-03-17` ([definición de la PoC](docs/hito_3/definicion-de-la-poc.md), 3.1.1).
 - [ ] Sumar al banco material de al menos una carrera fuera de Ing. en Sistemas.

@@ -1,6 +1,8 @@
 ---
-description: Resumen del estado del proyecto Study Copilot contra los entregables de cada hito
-allowed-tools: Bash(git status:*), Bash(git log:*), Bash(git tag:*), Bash(git fetch:*), Bash(git diff:*), Bash(ls:*), Read, Glob, Grep
+description: Resumen del estado del proyecto contra los entregables de cada hito; con `since <commit>`, también qué cambió y qué decisiones hay que validar
+when_to_use: Al volver al proyecto después de un tiempo, o para ponerte al día con lo que hizo tu compañero
+argument-hint: "[since <commit>]"
+allowed-tools: Bash(git status:*), Bash(git log:*), Bash(git tag:*), Bash(git fetch:*), Bash(git diff:*), Bash(git config:*), Bash(ls:*), Read, Glob, Grep
 ---
 
 Hacé un catch-up del proyecto Study Copilot para alguien que no recuerda en qué
@@ -47,6 +49,21 @@ fecha fija el enunciado y si ya pasó.
 
 **¿Cómo seguimos?** Los próximos pasos en orden, con lo que bloquea a cada
 uno, y las preguntas que necesitás que el equipo responda.
+
+## Si el argumento es `since <commit>`
+
+Agregá, antes de "¿Qué hicimos?", la sección **¿Qué cambió desde `<commit>`?**,
+armada con `git log <commit>..HEAD` y `git diff --stat <commit>..HEAD`. Si el
+commit no existe, decilo y seguí con el catch-up normal.
+
+- **Cambios:** qué documentos o código cambiaron, y quién los hizo.
+- **Decisiones a validar:** las decisiones tomadas en ese rango por otro integrante
+  (compará los autores con `git config user.name`). Buscalas en los cambios de las
+  bitácoras e historiales, la definición de la PoC y `docs/decisiones-de-proceso.md`.
+  Para cada una: qué se decidió, dónde está escrito y qué alternativa se descartó.
+
+Git muestra quién escribió algo, no quién lo aprobó: presentá estas decisiones como
+"a validar", sin afirmar que el equipo no las discutió.
 
 ## Reglas
 
