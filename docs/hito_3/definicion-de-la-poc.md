@@ -4,9 +4,9 @@
 
 Cuatro partes: propuesta, spec, diseño y plan. Este documento es el contrato:
 lo que no está acá no se construye, y en la semana 9 la PoC se valida contra
-los criterios de 2.3. Insumos: [`canvas.md`](../../canvas.md) (Hito 1) y
+los criterios de 2.3. Insumos: [`canvas.md`](../hito_1/canvas.md) (Hito 1) y
 [`4-veredicto.md`](../hito_2/4-veredicto.md) (Hito 2); las celdas citadas son
-de [`eda-viabilidad.ipynb`](../../eda-viabilidad.ipynb), que corre sobre
+de [`eda-viabilidad.ipynb`](../hito_2/eda-viabilidad.ipynb), que corre sobre
 `datos/`.
 
 ## Historial de versiones
@@ -18,6 +18,7 @@ de [`eda-viabilidad.ipynb`](../../eda-viabilidad.ipynb), que corre sobre
 | 0.2 | 2026-11-02 | Decisión del modelo (3.1.1) con la prueba de `experimentos/`; riesgo 1 con cifras |
 | 0.3 | 2026-11-03 | Decisiones de diseño 3.1.2 a 3.1.5; salen del alcance la fecha del material, detectar material de otra materia, la anonimización y la escalabilidad |
 | 0.4 | 2026-11-10 | Entra el contenido que elige el estudiante (preguntas de autoevaluación, ejercicios prácticos y preguntas tipo parcial), que se genera aunque no se suba ningún archivo; los archivos se cargan por tema, más un material general. Cambian 1.1, 1.2, 1.3, 1.4, 3.1.2, 3.1.3, 3.1.4 y 3.2. Los ejercicios tipo parcial salían del alcance en 1.3: queda marcado como suspendido |
+| 0.4.1 | 2026-11-11 | Correcciones sin cambio de contenido: los enlaces al canvas y al notebook, que se habían movido a `docs/hito_1/` y `docs/hito_2/`; y la alternativa 3 de 3.1.3, que había quedado mezclada con la 2 y con restos de su versión anterior |
 
 ---
 
@@ -345,14 +346,14 @@ que el modelo solo no la resuelve: 0 de 18 planes válidos con una llamada
    criterio de ventaja.
 2. **Workflow con pasos fijados por el equipo.** El código ordena los pasos y
    el modelo interviene en uno solo. Es lo que se midió en 3.1.1 como
-   alternativa elegida. Sigue en pie.el
+   alternativa elegida. Sigue en pie.
+3. **Workflow con una llamada por pieza:** una para el plan y otra para el
    contenido de cada tema, a pedido. Cada salida es más corta y el reintento
    del plan no rehace el contenido, pero suma llamadas y latencia por cada
    tema que se consulta. Descartada: una sola llamada deja una sola salida
    para validar y registrar. Con tres tipos de contenido la salida única
    crece, y es el primer candidato a revisar si la nueva corrida muestra que
-   el costo o la latencia no se sostienenscartada: una sola llamada deja una sola salida
-   para validar y registrar.
+   el costo o la latencia no se sostienen.
 4. **Agente.** El modelo, con herramientas (leer un archivo, validar el plan,
    recalcular minutos), decide qué hacer y cuándo terminar. Sirve cuando el
    camino no se conoce de antemano, que no es el caso. El costo, la latencia

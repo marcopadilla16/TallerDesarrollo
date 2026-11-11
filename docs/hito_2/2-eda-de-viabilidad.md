@@ -3,9 +3,9 @@
 > **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 4 · **Fecha:** 03/11/2026
+> **Versión:** 5 · **Fecha:** 11/11/2026
 > **Muestra** (ruta en el repo): `datos/` — 14 archivos de 3 cátedras de Ing. en Sistemas (UTN FR Delta)
-> **Notebook** (ruta en el repo): `eda-viabilidad.ipynb` — corre de punta a punta sobre `datos/`, con las versiones de `requirements.txt`
+> **Notebook** (ruta en el repo): `docs/hito_2/eda-viabilidad.ipynb` — corre de punta a punta sobre `datos/`, con las versiones de `requirements.txt`
 
 ---
 

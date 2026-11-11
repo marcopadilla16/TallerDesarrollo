@@ -44,11 +44,11 @@ anterior.
 
 | # | Documento | Qué responde |
 |---|---|---|
-| 1 | [propuesta.md](propuesta.md) | Qué es Study Copilot y qué problema ataca |
-| 2 | [canvas.md](canvas.md) | Hipótesis de problema, solución, datos, métricas y riesgos. Incluye historial de versiones al final |
+| 1 | [propuesta.md](docs/propuesta.md) | Qué es Study Copilot y qué problema ataca |
+| 2 | [canvas.md](docs/hito_1/canvas.md) | Hipótesis de problema, solución, datos, métricas y riesgos. Incluye historial de versiones al final |
 | 3 | [Mapa de fuentes](docs/hito_2/1-mapa-de-fuentes.md) | Qué datos necesita el proyecto y qué pasó al intentar conseguirlos |
 | 4 | [EDA de viabilidad](docs/hito_2/2-eda-de-viabilidad.md) | Nivel exigido vs. nivel medido por propiedad, y búsqueda de *leakage* |
-| 5 | [eda-viabilidad.ipynb](eda-viabilidad.ipynb) | Los números del EDA: una celda por propiedad y por tipo de *leakage* |
+| 5 | [eda-viabilidad.ipynb](docs/hito_2/eda-viabilidad.ipynb) | Los números del EDA: una celda por propiedad y por tipo de *leakage* |
 | 6 | [Datasheet](docs/hito_2/3-datasheet.md) | Qué se sabe y qué no de la muestra (formato *Datasheets for Datasets*) |
 | 7 | [Veredicto](docs/hito_2/4-veredicto.md) | La decisión, sus fundamentos, la exposición al riesgo y el nuevo alcance |
 | 8 | [Definición de la PoC](docs/hito_3/definicion-de-la-poc.md) | Qué se construye, cómo se valida y con qué modelo. En curso |
@@ -65,9 +65,6 @@ notebook. El enunciado de la cátedra para el Hito 2 está en
 ├── CLAUDE.md                 # Reglas de trabajo: coherencia entre documentos
 ├── .claude/commands/         # Comandos del proyecto para Claude Code (ver /help-project)
 ├── .github/prompts/          # Los mismos comandos para Copilot en VS Code
-├── propuesta.md              # Idea inicial del proyecto
-├── canvas.md                 # AI Opportunity Canvas (documento vivo)
-├── eda-viabilidad.ipynb      # Notebook del EDA (Hito 2)
 ├── requirements.txt
 ├── .env.example              # Variables para poc/ y experimentos/ (copiar a .env)
 ├── datos/                    # Muestra: 14 archivos, 3 materias de Ing. en Sistemas
@@ -86,15 +83,18 @@ notebook. El enunciado de la cátedra para el Hito 2 está en
 ├── .streamlit/config.toml    # Colores de la interfaz
 ├── tests/                    # Tests automáticos, con la API simulada
 └── docs/
+    ├── propuesta.md          # Idea inicial del proyecto
     ├── decisiones-de-proceso.md  # Exploraciones de proceso, insumo del informe final
     ├── hito_1/
-    │   └── ai-opportunity-canvas.pdf
+    │   ├── ai-opportunity-canvas.pdf  # Plantilla de la cátedra
+    │   └── canvas.md         # AI Opportunity Canvas (documento vivo)
     ├── hito_2/
     │   ├── ENUNCIADO.md      # Consigna de la cátedra
     │   ├── 1-mapa-de-fuentes.md
     │   ├── 2-eda-de-viabilidad.md
     │   ├── 3-datasheet.md
-    │   └── 4-veredicto.md
+    │   ├── 4-veredicto.md
+    │   └── eda-viabilidad.ipynb  # Notebook del EDA
     └── hito_3/
         ├── README.md         # Consigna de la cátedra
         └── definicion-de-la-poc.md
@@ -106,11 +106,11 @@ Requiere Python 3.10 o superior.
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook eda-viabilidad.ipynb
+jupyter notebook docs/hito_2/eda-viabilidad.ipynb
 ```
 
-El notebook debe ejecutarse **desde la raíz del repositorio** (lee la carpeta
-`datos/` con una ruta relativa) y corre de punta a punta sin pasos manuales.
+El notebook busca la carpeta `datos/` subiendo desde donde se ejecuta, así que
+corre desde la raíz o desde `docs/hito_2/`, de punta a punta y sin pasos manuales.
 `pypdf` está fijado en `requirements.txt`: con otra versión cambia el texto extraído y
 no se reproducen los caracteres citados en los documentos.
 

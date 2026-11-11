@@ -31,6 +31,15 @@ Las decisiones de aquel momento no se reescriben.
 **Lo que se dejó como está.** Un error de tipeo en el datasheet ("resuúmenes"), a
 propósito.
 
+**Segunda tanda (2026-11-11).** El notebook y los documentos del Hito 1 se movieron a
+`docs/hito_1/`, `docs/hito_2/` y `docs/` (commit `829e7fd`), y eso rompió dos cosas:
+
+- **El notebook no corría.** Leía `datos/` con una ruta relativa, y Jupyter lo ejecuta
+  desde su propia carpeta. Ahora busca `datos/` subiendo desde donde se ejecuta. Se
+  corrió desde `docs/hito_2/` con `pypdf==6.15.0`, y las cifras citadas se reproducen
+  sin cambios.
+- **EDA (v5).** La ruta del notebook en el encabezado.
+
 ## OpenSpec y Spec Kit para el desarrollo guiado por especificaciones
 
 **Fecha:** 2026-11-03 · **Momento del proyecto:** Hito 3 en curso, sin código del
