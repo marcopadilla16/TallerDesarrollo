@@ -26,9 +26,17 @@ reemplaza. El historial de lo que el equipo pensó también se evalúa.
 Las marcas de trabajo, como un pendiente que ya se resolvió, sí se pueden quitar,
 dejando constancia en la bitácora o el historial del documento.
 
-## Lo entregado en un hito cerrado no se reescribe
+## En un hito cerrado se corrigen errores, no decisiones
 
 Los documentos de `docs/hito_1/` y `docs/hito_2/` registran lo que se sabía al
-entregarlos. Si algo quedó superado, se deja constancia en un documento vivo
-(`canvas.md`, `README.md`, la definición de la PoC). `docs/hito_3/definicion-de-la-poc.md`
-sigue abierto hasta el tag `hito-3`.
+entregarlos.
+
+- **Errores de hecho** (una referencia rota, un campo vacío, una cifra que no se
+  reproduce): se corrigen en el documento y se sube su versión. Van como commits del
+  hito en curso, sin tags nuevos, con un comentario que diga qué se corrige y por qué.
+  Se registran en `docs/decisiones-de-proceso.md`.
+- **Lo que quedó superado después** (por ejemplo, que el proveedor todavía no estaba
+  elegido): no se reescribe. Se deja constancia en un documento vivo (`canvas.md`,
+  `README.md`, la definición de la PoC).
+
+`docs/hito_3/definicion-de-la-poc.md` sigue abierto hasta el tag `hito-3`.

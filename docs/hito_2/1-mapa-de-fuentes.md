@@ -1,9 +1,9 @@
 # Mapa de fuentes — Study Copilot
 
-> **Equipo:** …
+> **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 4 · **Fecha:** 11/10/2026
+> **Versión:** 5 · **Fecha:** 03/11/2026
 
 ## 1. Las fuentes
 
@@ -35,13 +35,13 @@
 
 | # | Quién del equipo la consigue | Para cuándo |
 |---|---|---|
-| 1 | Por asignar entre Marco P. y Fede S.: preparar y aplicar encuesta/entrevistas con participación voluntaria | A definir en clase según el calendario del trimestre |
-| 2 | Por asignar entre Marco P. y Fede S.: definir campos mínimos del formulario y probarlo con la PoC | A definir en clase; antes de la primera prueba de uso |
-| 3 | Por asignar entre Marco P. y Fede S.: especificar eventos mínimos y registro de sesiones | A definir en clase; antes de la primera prueba de uso |
-| 4 |  Por asignar entre Marco P. y Fede S.: localizar y abrir al menos un temario vigente de una materia elegida. Ya no hay que reclamar temarios a las cátedras: los sube el usuario. | Antes de la primera prueba de uso |
-| 5 | Por asignar entre Marco P. y Fede S.: localizar y revisar permisos de una muestra de exámenes de esa materia. | Permisos y anonimización: antes del próximo push |
-| 6 | Por asignar entre Marco P. y Fede S.: preparar preguntas de seguimiento y decidir si realmente hace falta recolectar notas | Después de la prueba de uso; fecha a definir |
-| 7 | Por asignar entre Marco P. y Fede S.: diseñar y etiquetar casos límite sintéticos para probar métricas y mitigaciones | Si no hay muestra real suficiente o para probar validadores; fecha a definir |
+| 1 | Federico Sanches y Marco Padilla: preparar y aplicar encuesta/entrevistas con participación voluntaria | A definir en clase según el calendario del trimestre |
+| 2 | Federico Sanches y Marco Padilla: definir campos mínimos del formulario y probarlo con la PoC | A definir en clase; antes de la primera prueba de uso |
+| 3 | Federico Sanches y Marco Padilla: especificar eventos mínimos y registro de sesiones | A definir en clase; antes de la primera prueba de uso |
+| 4 |  Federico Sanches y Marco Padilla: localizar y abrir al menos un temario vigente de una materia elegida. Ya no hay que reclamar temarios a las cátedras: los sube el usuario. | Antes de la primera prueba de uso |
+| 5 | Federico Sanches y Marco Padilla: localizar y revisar permisos de una muestra de exámenes de esa materia. | Permisos y anonimización: antes del próximo push |
+| 6 | Federico Sanches y Marco Padilla: preparar preguntas de seguimiento y decidir si realmente hace falta recolectar notas | Después de la prueba de uso; fecha a definir |
+| 7 | Federico Sanches y Marco Padilla: diseñar y etiquetar casos límite sintéticos para probar métricas y mitigaciones | Si no hay muestra real suficiente o para probar validadores; fecha a definir |
 
 **Límite de interpretación:** los datos sintéticos sirven para probar instrumentos,
 validadores y escenarios; no permiten afirmar que los hábitos, riesgos o

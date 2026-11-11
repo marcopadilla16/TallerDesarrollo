@@ -1,10 +1,11 @@
 # EDA de viabilidad — Study Copilot
 
-> **Equipo:** Padilla, Marco; Sanches, Federico
+> **Equipo:** sanches-padilla
+> **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 3 · **Fecha:** 11/10/2026
+> **Versión:** 4 · **Fecha:** 03/11/2026
 > **Muestra** (ruta en el repo): `datos/` — 14 archivos de 3 cátedras de Ing. en Sistemas (UTN FR Delta)
-> **Notebook** (ruta en el repo): `eda-viabilidad.ipynb` — corre de punta a punta sobre `datos/`
+> **Notebook** (ruta en el repo): `eda-viabilidad.ipynb` — corre de punta a punta sobre `datos/`, con las versiones de `requirements.txt`
 
 ---
 
@@ -37,9 +38,8 @@ arquitectura del 11/10/2026, y aplica al **banco de pruebas**, que es lo que
 
 > Las filas de **vigencia**, **representatividad** y **confiabilidad** son las
 > que más se movieron, y conviene mirarlas con desconfianza: son exactamente las
-> tres que la muestra no cumplía. El argumento de por qué el cambio es legítimo
-> está en la advertencia metodológica de arriba; si el lector no lo compra, la
-> columna del nivel original queda para que pueda evaluar con la vara vieja.
+> tres que la muestra no cumplía. Si el lector no compra el cambio, la columna
+> del nivel original queda para que pueda evaluar con la vara vieja.
 
 ## 2. Resultados de la verificación
 

@@ -1,8 +1,9 @@
 # Veredicto de viabilidad — Study Copilot
 
-> **Equipo:** Padilla, Marco; Sanches, Federico
+> **Equipo:** sanches-padilla
+> **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 3 · **Fecha:** 11/10/2026
+> **Versión:** 4 · **Fecha:** 03/11/2026
 
 ---
 

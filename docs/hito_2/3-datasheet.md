@@ -1,8 +1,9 @@
 # Datasheet abreviada — Study Copilot
 
-> **Equipo:** Padilla, Marco; Sanches, Federico
+> **Equipo:** sanches-padilla
+> **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 2 · **Fecha:** 11/10/2026
+> **Versión:** 3 · **Fecha:** 03/11/2026
 > **Muestra:** `datos/` — 14 archivos de 3 cátedras de Ing. en Sistemas (UTN FR Delta)
 ---
 

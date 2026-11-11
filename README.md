@@ -27,7 +27,7 @@ Todavía no contiene código del producto.
 | #1 | Propuesta y AI Opportunity Canvas (v2) | Tag `v1.0` |
 | #2 | Mapa de fuentes | Commit `2e69bc9` (sin tag) |
 | #3 | Hito 2: muestra, EDA de viabilidad, datasheet y veredicto (**decisión: ajustar el alcance**). Canvas actualizado a v3 | Tag `v2.0` |
-| #4 | Hito 3: definición de la PoC, **en curso**. Incluye los cierres del Hito 1 en el canvas (v5), sin tags nuevos | Sin tag todavía |
+| #4 | Hito 3: definición de la PoC, **en curso**. Incluye los cierres del Hito 1 en el canvas (v5) y las correcciones de los documentos del Hito 2, sin tags nuevos ([registro](docs/decisiones-de-proceso.md)) | Sin tag todavía |
 
 **En una línea:** el EDA mostró que el material disponible alcanza para construir
 y probar el sistema, pero no para priorizar temas por su peso real (2 de 3
@@ -97,6 +97,8 @@ jupyter notebook eda-viabilidad.ipynb
 
 El notebook debe ejecutarse **desde la raíz del repositorio** (lee la carpeta
 `datos/` con una ruta relativa) y corre de punta a punta sin pasos manuales.
+`pypdf` está fijado en `requirements.txt`: con otra versión cambia el texto extraído y
+no se reproducen los caracteres citados en los documentos.
 
 ## Sobre los datos
 
@@ -117,6 +119,7 @@ Surgen del [mapa de fuentes](docs/hito_2/1-mapa-de-fuentes.md), el
 [datasheet](docs/hito_2/3-datasheet.md) y el [veredicto](docs/hito_2/4-veredicto.md):
 
 - [ ] Anonimizar la muestra (5 archivos con autoría en metadatos, 2 con nombre real).
+- [ ] Documentar de dónde se obtuvo la muestra: los enlaces a los repositorios estudiantiles, que el enunciado del Hito 2 pide para poder regenerarla.
 - [ ] Consultar permisos de redistribución a las cátedras (14 de 14 sin licencia declarada).
 - [ ] Definir el comportamiento del producto cuando el usuario no sube temario.
 - [x] Elegir proveedor de LLM y fijar la versión del modelo: OpenAI, `gpt-5.4-mini-2026-03-17` ([definición de la PoC](docs/hito_3/definicion-de-la-poc.md), 3.1.1).
