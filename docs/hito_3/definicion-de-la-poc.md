@@ -19,6 +19,7 @@ de [`eda-viabilidad.ipynb`](../hito_2/eda-viabilidad.ipynb), que corre sobre
 | 0.3 | 2026-11-03 | Decisiones de diseño 3.1.2 a 3.1.5; salen del alcance la fecha del material, detectar material de otra materia, la anonimización y la escalabilidad |
 | 0.4 | 2026-11-10 | Entra el contenido que elige el estudiante (preguntas de autoevaluación, ejercicios prácticos y preguntas tipo parcial), que se genera aunque no se suba ningún archivo; los archivos se cargan por tema, más un material general. Cambian 1.1, 1.2, 1.3, 1.4, 3.1.2, 3.1.3, 3.1.4 y 3.2. Los ejercicios tipo parcial salían del alcance en 1.3: queda marcado como suspendido |
 | 0.4.1 | 2026-11-11 | Correcciones sin cambio de contenido: los enlaces al canvas y al notebook, que se habían movido a `docs/hito_1/` y `docs/hito_2/`; y la alternativa 3 de 3.1.3, que había quedado mezclada con la 2 y con restos de su versión anterior |
+| 0.5 | 2026-11-11 | Spec completa. User experience (2.2): señal de confianza binaria, sin puntaje; corregir es cambiar el formulario y volver a pedir. Escenarios (2.1): happy path, 4 casos borde (el peor, muchos temas en pocas horas) y el plan inválido después del reintento como error del sistema. Criterios de aceptación (2.3), según la plantilla de la cátedra (`plantilla/`). Calidad: válidos ≥ 90% y prioridad coherente ≥ 80%; la corrección del contenido queda como señal del riesgo 2, no como criterio. Latencia: p90 ≤ 120 s, con lo que se suspende «sin umbral» en 1.3 y 3.1.5. Casos borde: 5 de 5 escenarios cubiertos, con el error del sistema. Ventaja: workflow − *baseline* ≥ 30 puntos en planes válidos. En 1.2, la decisión cubre los umbrales nuevos (la prioridad bajo el 80% cambia el enfoque; una ventaja menor a 30 puntos es NO GO) y se suspende «ninguna ventaja» |
 
 ---
 
@@ -78,17 +79,23 @@ archivo ilegible o malformado).
    3 materias del banco: en al menos el 90%, el plan respeta las horas
    declaradas y cubre todos los temas ingresados, verificado por código y no
    a ojo. Y el workflow supera al *baseline* (una llamada única con el
-   formulario y el material) en ese mismo conjunto.
-3. **Qué decisión habilita.** GO: congelar el alcance en la semana 10 y
-   pasar a una prueba de uso real, con el formulario y el registro de eventos
-   instrumentados, que es lo único que mide las métricas de negocio. Cambiar
-   el enfoque: si la validez estructural no llega al 90% con los planes B de
-   1.4 agotados, el cronograma lo arma una regla determinista (horas
-   proporcionales a 1 − nivel, ningún tema en cero, repaso al final) y el LLM
-   queda sólo para explicar y generar preguntas. NO GO: validez estructural
-   bajo el 50%, o ninguna ventaja sobre el *baseline*; en ese caso el
-   producto no supera a "chatbot + calendario" y se vuelve a la Sección 4 del
-   canvas.
+   formulario y el material) en ese mismo conjunto, por al menos 30 puntos (2.3).
+3. **Qué decisión habilita.** GO, con los criterios de 2.3 cumplidos:
+   congelar el alcance en la semana 10 y pasar a una prueba de uso real, con
+   el formulario y el registro de eventos instrumentados, que es lo único que
+   mide las métricas de negocio. Cambiar el enfoque: si la validez
+   estructural no llega al 90% o la prioridad coherente al 80%, con los
+   planes B de 1.4 agotados, el cronograma lo arma una regla determinista
+   (horas proporcionales a 1 − nivel, ningún tema en cero, repaso al final) y
+   el LLM queda sólo para explicar y generar preguntas. NO GO: validez
+   estructural bajo el 50%, o una ventaja sobre el *baseline* menor a 30
+   puntos; en ese caso el producto no supera a "chatbot + calendario" y se
+   vuelve a la Sección 4 del canvas. Un escenario de 2.1 sin cubrir no decide
+   nada: se corrige y se vuelve a chequear antes del GO. Una latencia sobre el
+   techo de 2.3 pasa al plan B del riesgo 3 (3.1.5).
+   *Suspendido en la v0.5:* «NO GO: [...] o ninguna ventaja sobre el
+   *baseline*». Con el umbral de 2.3, una ventaja de entre 0 y 30 puntos no
+   cumplía el GO ni caía en el NO GO.
 
 ### 1.3 Fuera de alcance
 
@@ -126,10 +133,13 @@ archivo ilegible o malformado).
   el GO.
 - **Cuentas, persistencia entre sesiones, integración con calendarios y
   despliegue.** La PoC corre local y la usa una persona por vez.
-- **Escalabilidad y límites de latencia y costo por plan.** Sin usuarios no
-  hay carga que sostener, y lo medido en 3.1.1 no sirve de línea de base para
-  el sistema final. Latencia y costo se registran por pedido, sin umbral.
-  Ver 3.1.5.
+- **Escalabilidad y límite de costo por plan.** Sin usuarios no hay carga que
+  sostener, y lo medido en 3.1.1 no sirve de línea de base para el sistema
+  final. El costo se registra por pedido, sin umbral. Ver 3.1.5.
+  *Suspendido en la v0.5:* «límites de latencia [...] Latencia y costo se
+  registran por pedido, sin umbral». La plantilla pide un criterio de latencia
+  con percentil; queda fijado en 2.3 como techo de tolerancia para la demo
+  (p90 ≤ 120 s), no como límite de producto.
 - **Anonimizar el material antes de enviarlo a OpenAI.** La PoC no sale a
   usuarios y sólo procesa el banco de `datos/`; el texto se manda tal cual.
   Los metadatos con autor (5 de 14, celda 7) no se envían, porque la ingesta
@@ -180,15 +190,120 @@ formulario, no el archivo entero.
 
 ### 2.1 Escenarios
 
-*Pendiente (Clase 6).*
+#### Happy path
+
+- **Dado** un estudiante que prepara Gestión de Datos (la materia del banco con
+  temario), con 3 temas de niveles distintos, fecha de examen, horas por día y
+  objetivo, y con PDF legibles cargados en cada tema
+- **Cuando** pide el plan y las preguntas de autoevaluación
+- **Entonces** el sistema valida el formulario y extrae el texto de cada archivo
+- **Y** muestra un plan día por día que respeta las horas de cada día y cubre los
+  3 temas con su nombre
+- **Y** el tema de nivel más bajo recibe más minutos que el de nivel más alto
+- **Y** cada tema tiene su explicación de por qué se priorizó así
+- **Y** las preguntas de cada tema aparecen como borrador a revisar, con los
+  archivos en los que se apoyan
+- **Y** el pedido queda registrado
+
+#### Casos borde
+
+##### 2.1.1 Materia sin temario
+
+- **Dado** un estudiante de Investigación Operativa, que no tiene temario (2 de 3
+  materias del banco, celda 3), con parciales y guías de práctica cargados
+- **Cuando** pide el plan
+- **Entonces** el plan cubre todos los temas del formulario y respeta las horas
+- **Y** cada explicación justifica la prioridad con el nivel, la fecha, las horas
+  o el objetivo, sin atribuirle a un tema un peso en el examen
+- **Le cuesta al usuario:** que un tema que pesa mucho en el examen, pero que
+  declaró saber bien, reciba poco tiempo.
+
+##### 2.1.2 Sin archivos
+
+- **Dado** un formulario completo, sin ningún archivo cargado
+- **Cuando** pide el plan y ejercicios prácticos
+- **Entonces** el sistema genera el plan y los ejercicios con el conocimiento
+  general del modelo
+- **Y** la pantalla marca que el contenido se generó sin material
+- **Y** el registro deja constancia de que no hubo archivos
+- **Le cuesta al usuario:** estudiar con un ejercicio equivocado sin un fragmento
+  contra el cual contrastarlo.
+
+##### 2.1.3 Archivo ilegible o con un formato no admitido
+
+- **Dado** un tema con un PDF legible y otro archivo escaneado, sin capa de
+  texto, o con un formato que no es PDF ni TXT
+- **Cuando** pide el plan
+- **Entonces** el sistema rechaza ese archivo con un mensaje que lo nombra y dice
+  por qué
+- **Y** el pedido sigue con los archivos legibles
+- **Y** el registro guarda el aviso
+- **Le cuesta al usuario:** creer que el plan tuvo en cuenta un material que no
+  se leyó.
+
+##### 2.1.4 Muchos temas en pocas horas (peor caso borde)
+
+- **Dado** un formulario de Redes con 6 temas de niveles distintos y 5 horas en
+  total, repartidas en 3 días: el caso en el que falló la prioridad en 3.1.1
+- **Cuando** pide el plan
+- **Entonces** el plan respeta las horas y cubre los 6 temas
+- **Y** el promedio de minutos por nivel cumple bajo ≥ medio ≥ alto
+- **Y** si después del reintento no lo cumple, el plan se muestra marcado con el
+  error de prioridad, no se oculta (3.1.3, paso 5)
+- **Le cuesta al usuario:** dedicarle menos tiempo a lo que menos sabe, que es lo
+  que el producto promete evitar. Es el que más le cuesta: lo retoma 2.2.
+
+#### Error del sistema
+
+- **Dado** un pedido cuyo plan no pasa la validación por código: un día se pasa
+  de las horas declaradas o falta un tema del formulario
+- **Cuando** el reintento, con los errores concretos, tampoco lo corrige
+- **Entonces** el sistema muestra el plan marcado con esos errores, sin ocultarlo
+  ni presentarlo como válido (3.1.3, paso 5)
+- **Y** el registro guarda el pedido con los dos intentos y sus errores
+- **Y** el usuario puede volver a pedir, o ajustar el formulario (menos temas o
+  más horas) y pedir de nuevo
+
+La caída de la API (timeout, sin crédito, respuesta que no es JSON) no es este
+escenario: está fijada como requerimiento en 3.1.5, con su test.
 
 ### 2.2 User experience
 
-*Pendiente (Clase 6).*
+1. **Interacción y control.** El usuario completa el formulario en una app
+   local de Streamlit: materia, fecha, objetivo, horas por día, cada tema con
+   su nivel y sus archivos, y qué contenido quiere. Controla todo lo que el
+   modelo recibe: los temas del plan salen del formulario, no de los archivos,
+   y el modelo no puede agregar ni quitar ninguno (la validación lo rechaza).
+   No controla cómo reparte los minutos: no puede ajustar el plan conversando
+   (1.3).
+2. **Señal de confianza.** No hay un puntaje: el modelo no da uno confiable.
+   La señal es explícita y binaria. Todo se muestra como borrador a revisar.
+   Cada tema dice en qué archivos se apoyó, el contenido generado sin material
+   lo dice, y un plan que no pasó la validación se muestra marcado con sus
+   errores. Los archivos rechazados y los casi-duplicados se avisan con su
+   nombre.
+3. **Corrección o aviso.** En la PoC no se puede editar la salida ni avisar
+   que está mal: no hay tabla de feedback, porque no sale a usuarios (3.1.2).
+   Para corregir, el usuario cambia el formulario (niveles, horas, temas o
+   archivos) y vuelve a pedir.
+4. **Peor caso borde (2.1.4).** Con 6 temas en 5 horas, si la prioridad sigue
+   mal después del reintento, el usuario ve el plan igual, con una marca que
+   dice que un tema de nivel más bajo recibió menos minutos que otro de nivel
+   más alto. Para seguir, puede sumar horas o sacar los temas que mejor sabe y
+   volver a pedir, o usar el plan sabiendo dónde falla.
 
 ### 2.3 Criterios de aceptación
 
-*Pendiente (Clase 6).*
+| Criterio | Métrica (qué cuenta como respuesta aceptable) | Umbral (uno por tipo de error, si un error cuesta más que el otro) | Conjunto de evaluación | Cómo se chequea |
+|---|---|---|---|---|
+| Calidad de la respuesta | Plan válido: respeta las horas de cada día, cubre todos los temas del formulario con su nombre, no inventa temas y explica cada uno. Aparte, prioridad coherente: el promedio de minutos por nivel cumple bajo ≥ medio ≥ alto | Plan inválido, que no se puede usar: válidos ≥ 90% (1.2). Prioridad incoherente, que se puede usar pero no cumple lo que el producto promete: coherentes ≥ 80% (en 3.1.1 dio 14 de 18, el 78%) | ≥ 30 planes de las 3 materias, con formularios sintéticos que no se usaron para ajustar los prompts (3.1.2) | El script de evaluación cuenta, por código, los planes que pasan cada validación y los compara con cada umbral |
+| Latencia (con el percentil) | Tiempo desde que el usuario envía el formulario hasta que ve el resultado, con el reintento incluido; percentil 90 | p90 ≤ 120 s. Es un techo de tolerancia para una demo, no un límite de producto: la única medición con el material entero dio 79 s en Redes con un reintento | Los mismos ≥ 30 pedidos de la fila anterior | El script calcula el p90 de los tiempos del registro (3.1.2) y lo compara con el umbral |
+| Cobertura de los casos borde | Un escenario está cubierto si el sistema hace todo lo que dicen su «Entonces» y cada «Y» en 2.1. Entran los 4 casos borde y el error del sistema. En 2.1.4, mostrar el plan marcado cuando la prioridad falla es parte del escenario | 5 de 5 escenarios cubiertos | Un formulario sintético por escenario, con archivos del banco. Para 2.1.3 se agregan dos archivos de prueba declarados (uno sin capa de texto y otro con un formato no admitido), porque el banco no tiene ninguno (celda 4) | Una lista de sí o no por escenario, con cada «Entonces» y cada «Y». Rechazos, marcas y registro, con tests automáticos; lo que muestra la pantalla, a mano en la demo de la semana 9 |
+| Ventaja sobre el *baseline* | Diferencia, en puntos porcentuales, entre los planes válidos del workflow y los del *baseline* (una llamada única, 3.1.1), con la misma validación de la fila de calidad. Exige los nombres de los temas porque el producto tiene que poder verificar que cubre cada uno, aunque el plan del *baseline* le pueda servir a una persona (3.1.1). La prioridad no se compara: con los temas reformulados no se puede medir | Workflow − *baseline* ≥ 30 puntos: más que la variación entre dos corridas del mismo modelo en 3.1.1 (hasta 2 de 9 planes, unos 22 puntos) | Los mismos ≥ 30 formularios, corridos con las dos variantes | El script corre las dos variantes y compara los porcentajes de planes válidos con el umbral |
+
+La corrección conceptual del contenido generado (preguntas y ejercicios) no es un
+criterio de aceptación: no es el supuesto que la PoC pone a prueba (1.2). Se mide
+con la rúbrica sobre una muestra, como señal del riesgo 2 (1.4).
 
 ---
 
@@ -494,7 +609,9 @@ vez, sobre el banco de `datos/` (1.3).
 | | | Evaluación reproducible: un script corre los ≥30 planes y guarda los resultados, como `experimentos/resultados/` | Un comando, el mismo para los dos integrantes |
 | Escalable | 3 | No se busca (1.3) | — |
 
-Latencia y costo no tienen umbral: se registran en cada pedido (3.1.2).
+El costo no tiene umbral: se registra en cada pedido (3.1.2). La latencia tiene
+el techo de tolerancia de 2.3 (p90 ≤ 120 s). *Suspendido en la v0.5:* «Latencia y
+costo no tienen umbral», por el criterio de latencia que pide la plantilla (2.3).
 
 **Consecuencias.** La confiabilidad que se fija es la del plan y la de la
 ingesta, no la del servicio: si la API de OpenAI falla, el usuario ve un
@@ -503,11 +620,15 @@ respaldo. Los tests necesitan formularios sintéticos fijos y una API
 simulada, que hay que construir. Cada corrida del script de evaluación tiene
 costo de API, así que no se corre en cada cambio sino antes de cada decisión
 y en la semana 9. Sin integración continua, que los tests pasen depende de
-que alguien los corra. Sin límite de latencia, un plan de Redes con el
-material entero y las preguntas puede tardar más de lo aceptable; si pasa,
-los datos del registro permiten fijar el límite después. Y si el resultado es
+que alguien los corra. Y si el resultado es
 GO, la prueba de uso va a pedir despliegue, concurrencia y límites de costo
 que la PoC no construye.
+
+*Suspendido en la v0.5:* «Sin límite de latencia, un plan de Redes con el
+material entero y las preguntas puede tardar más de lo aceptable; si pasa, los
+datos del registro permiten fijar el límite después». Lo reemplaza el techo de
+2.3: si un pedido lo supera de forma sistemática, se pasa al plan B del riesgo 3
+(límite por pedido y fragmentos por tema).
 
 ### 3.2 Arquitectura
 

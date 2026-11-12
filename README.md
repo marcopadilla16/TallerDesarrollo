@@ -97,6 +97,8 @@ notebook. El enunciado de la cátedra para el Hito 2 está en
     │   └── eda-viabilidad.ipynb  # Notebook del EDA
     └── hito_3/
         ├── README.md         # Consigna de la cátedra
+        ├── plantilla/
+        │   └── definicion-de-la-poc.md  # Plantilla de la cátedra, sin completar
         └── definicion-de-la-poc.md
 ```
 
@@ -170,4 +172,4 @@ Surgen del [mapa de fuentes](docs/hito_2/1-mapa-de-fuentes.md), el
 - [ ] Decidir qué hacer con la prioridad en el caso de 6 temas en 5 horas: el reintento no la corrigió en la corrida real (riesgo 1 de la definición; plan B: regla determinista).
 - [ ] Correr contra la API real el contenido nuevo (ejercicios prácticos y preguntas tipo parcial, con y sin archivos): los tests lo cubren con la API simulada, pero la corrida real del 10/11/2026 fue anterior y sólo pidió el plan. Con tres tipos de contenido la salida es más larga, así que se espera más costo y latencia.
 - [ ] Rediscutir la rúbrica de corrección conceptual: la definición (v0.4) la pide ahora para tres tipos de contenido y para pedidos sin archivos, y entraba en tres semanas sólo para uno (1.3, suspendido).
-- [ ] Script de evaluación (≥30 planes, workflow vs. *baseline*): requiere antes los criterios de aceptación de la sección 2.3, todavía pendientes.
+- [ ] Script de evaluación (≥30 planes, workflow vs. *baseline*): mide los criterios de aceptación de la sección 2.3, fijados en la v0.5 de la definición (calidad, latencia, casos borde y ventaja sobre el *baseline*).
