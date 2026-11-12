@@ -40,6 +40,43 @@ propósito.
   sin cambios.
 - **EDA (v5).** La ruta del notebook en el encabezado.
 
+## Extensión de la definición de la PoC por encima del tope de la plantilla
+
+**Fecha:** 2026-11-12 · **Momento del proyecto:** Hito 3, antes del tag ·
+**Estado:** aplicada
+
+**Qué se decidió.** Recortar `docs/hito_3/definicion-de-la-poc.md` a unas 4.600
+palabras, y no a las 3.000 que fija la plantilla de la cátedra
+(`docs/hito_3/plantilla/`, "Extensión").
+
+**Por qué.** Con las cuatro partes escritas, el documento tenía unas 7.500
+palabras. Llegar a 3.000 obligaba a elegir entre dos cosas que el equipo no
+quiso resignar:
+
+- **Borrar lo superado.** La regla del repo (CLAUDE.md) es marcarlo como
+  suspendido y conservarlo, porque el historial también se evalúa.
+- **Sacar las alternativas descartadas y sus motivos.** El criterio de diseño
+  del enunciado pide que cada registro evalúe al menos dos alternativas y diga
+  por qué se descartó cada una.
+
+**Cómo se recortó.** Se quitaron las repeticiones entre secciones (por ejemplo,
+el *baseline* se describía en 3.1.1, 3.1.3, 2.3 y 3.2) y se acortó la prosa.
+Se conservan todas las decisiones, las cifras, las referencias a celdas, las
+alternativas y los textos suspendidos, con su cita textual. El conteo incluye
+el historial, las tablas y el diagrama.
+
+**Alternativas descartadas.**
+
+- *Llegar a 3.000 moviendo el historial y los textos suspendidos a un anexo.*
+  Cumplía el tope sin perder nada, pero dejaba el documento entregado sin el
+  rastro de lo que cambió.
+- *Preguntarle al docente si el tope es estricto o si cuenta las tablas.*
+  Sigue abierta: si responde que es estricto, la opción del anexo es la
+  salida.
+
+**Qué se resigna.** Incumplir una indicación explícita de la plantilla, a
+sabiendas.
+
 ## OpenSpec y Spec Kit para el desarrollo guiado por especificaciones
 
 **Fecha:** 2026-11-03 · **Momento del proyecto:** Hito 3 en curso, sin código del
