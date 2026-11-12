@@ -3,7 +3,7 @@
 > **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 5 · **Fecha:** 11/11/2026
+> **Versión:** 6 · **Fecha:** 12/11/2026
 > **Muestra** (ruta en el repo): `datos/` — 14 archivos de 3 cátedras de Ing. en Sistemas (UTN FR Delta)
 > **Notebook** (ruta en el repo): `docs/hito_2/eda-viabilidad.ipynb` — corre de punta a punta sobre `datos/`, con las versiones de `requirements.txt`
 
@@ -55,7 +55,7 @@ volteó el cambio de arquitectura y cuáles no.
 | **Corrección** | **Medido** | Duplicados exactos: **0**. PDFs sin capa de texto: **0 de 13**. PDFs malformados: **1 de 13** (`investigacion_operativa/examenes/examen_02.pdf`). Formatos: **13** PDF y **1** TXT | Celda 4 | La corrección **conceptual** de lo generado sigue **No estimada**: el proveedor está acotado a ChatGPT o Claude, pero no se probó ninguno contra este material | **Sí → Sí.** No cambió. El PDF malformado, que antes era un defecto, ahora es el caso de prueba de manejo de error |
 | **Vigencia** | **Medido** | Rango **2015-2020**. Más reciente: **6 años**. Temario: **11 años**. Sin fecha determinable: **6 de 14** | Celda 5 | — | **No → Sí, como banco.** Deja de ser incumplimiento porque el usuario sube su material. El banco tiene la variedad temporal que hacía falta, incluidos **6** archivos sin fecha, que es el caso difícil |
 | **Representatividad** | **Medido**, con gráfico | Carreras: **1**. Materias: **3**. Fuera del área del equipo: **0**. Instituciones: **1**. Formatos: **2**. Orígenes distintos: **2** (cátedra y estudiante). Distribución: **5, 6 y 3** archivos por materia | Celda 6 | La distribución de niveles autoevaluados pertenece al formulario, que no se obtuvo | **No → No.** Cumple en formatos y orígenes, **falla en el requisito de ≥1 carrera externa**. Es el único incumplimiento que sobrevive al cambio de arquitectura |
-| **Confiabilidad** | **Medido** | **4 de 14** archivos declaran en su propio texto ser compilaciones de estudiantes: **55%** del volumen de texto (87.361 de 158.120). Revisores: **0**. Nombres de persona en metadatos: **5 de 14** | Celda 7 | — | **No → Sí.** La fila que más cambia de signo: si el usuario sube lo que tiene a mano, el material compilado por compañeros **es** el caso real. Un banco sólo con material oficial probaría menos |
+| **Confiabilidad** | **Medido** | **4 de 14** archivos declaran en su propio texto ser compilaciones de estudiantes: **55%** del volumen de texto (87.361 de 158.120). Revisores: **0**. Campo de autor en metadatos: **5 de 14**, de los cuales **2** son nombres de persona | Celda 7 | — | **No → Sí.** La fila que más cambia de signo: si el usuario sube lo que tiene a mano, el material compilado por compañeros **es** el caso real. Un banco sólo con material oficial probaría menos |
 
 **Resumen: con la vara vigente, 5 de 6** propiedades cumplen como banco de
 pruebas, contra **1 de 6** con la vara original. Conviene decirlo con todas las

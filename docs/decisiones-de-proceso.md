@@ -40,6 +40,21 @@ propósito.
   sin cambios.
 - **EDA (v5).** La ruta del notebook en el encabezado.
 
+**Tercera tanda (2026-11-12).** Una revisión de coherencia de todo el repo encontró
+cuatro errores de hecho:
+
+- **Datasheet (v4).** Decía «6 de 14 archivos sin fecha en metadatos»: la celda 3
+  da 6 *con* fecha, así que son 8 sin. Los 6 de 14 son los archivos sin fecha
+  *determinable* (celda 5), que es otra cifra.
+- **EDA (v6).** La fila de confiabilidad decía «Nombres de persona en metadatos:
+  5 de 14», y el mismo EDA dice más abajo que son 2. Los 5 son archivos con campo
+  de autor (celda 7), y 2 de ellos tienen nombre de persona.
+- **Veredicto (v5).** Atribuía los formatos y los orígenes a las celdas 2 y 3;
+  salen de la celda 6.
+- **Mapa de fuentes (v6).** En las secciones 3 y 4, la fila 7 hablaba de los
+  sintéticos, que en la sección 1 son la fuente 8, y el LLM (fuente 7) no tenía
+  fila. Se agregó la fila del LLM con lo que se sabía al entregar el Hito 2.
+
 ## Extensión de la definición de la PoC por encima del tope de la plantilla
 
 **Fecha:** 2026-11-12 · **Momento del proyecto:** Hito 3, antes del tag ·
@@ -70,9 +85,10 @@ el historial, las tablas y el diagrama.
 - *Llegar a 3.000 moviendo el historial y los textos suspendidos a un anexo.*
   Cumplía el tope sin perder nada, pero dejaba el documento entregado sin el
   rastro de lo que cambió.
-- *Preguntarle al docente si el tope es estricto o si cuenta las tablas.*
-  Sigue abierta: si responde que es estricto, la opción del anexo es la
-  salida.
+
+**Pendiente.** Preguntarle al docente si el tope es estricto o si cuenta las
+tablas. No es una alternativa descartada: si responde que es estricto, la
+opción del anexo es la salida.
 
 **Qué se resigna.** Incumplir una indicación explícita de la plantilla, a
 sabiendas.

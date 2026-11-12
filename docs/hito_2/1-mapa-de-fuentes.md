@@ -3,7 +3,7 @@
 > **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 5 · **Fecha:** 03/11/2026
+> **Versión:** 6 · **Fecha:** 12/11/2026
 
 ## 1. Las fuentes
 
@@ -41,7 +41,8 @@
 | 4 |  Federico Sanches y Marco Padilla: localizar y abrir al menos un temario vigente de una materia elegida. Ya no hay que reclamar temarios a las cátedras: los sube el usuario. | Antes de la primera prueba de uso |
 | 5 | Federico Sanches y Marco Padilla: localizar y revisar permisos de una muestra de exámenes de esa materia. | Permisos y anonimización: antes del próximo push |
 | 6 | Federico Sanches y Marco Padilla: preparar preguntas de seguimiento y decidir si realmente hace falta recolectar notas | Después de la prueba de uso; fecha a definir |
-| 7 | Federico Sanches y Marco Padilla: diseñar y etiquetar casos límite sintéticos para probar métricas y mitigaciones | Si no hay muestra real suficiente o para probar validadores; fecha a definir |
+| 7 | Federico Sanches y Marco Padilla: elegir el proveedor de LLM, fijar la versión del modelo y probar sus respuestas contra el material de `datos/` | Antes de construir la PoC |
+| 8 | Federico Sanches y Marco Padilla: diseñar y etiquetar casos límite sintéticos para probar métricas y mitigaciones | Si no hay muestra real suficiente o para probar validadores; fecha a definir |
 
 **Límite de interpretación:** los datos sintéticos sirven para probar instrumentos,
 validadores y escenarios; no permiten afirmar que los hábitos, riesgos o
@@ -62,4 +63,5 @@ se consiguió. Todos los números salen de `eda-viabilidad.ipynb`, que corre sob
 | 4 | 1 temario (Gestión de Datos), 5 páginas | Sí, como banco de pruebas | Cambió el sentido de la fuente: ya no hay que conseguir temarios, los sube el usuario. Que 2 de 3 materias del banco no tengan temario deja de ser una carencia y pasa a ser un caso de prueba necesario: el producto tiene que funcionar sin temario, porque muchos usuarios no lo van a subir |
 | 5 | 13 archivos: 7 exámenes y 6 guías de práctica, de 3 materias | Sí, como banco de pruebas | Mejor de lo esperado en corrección: 0 duplicados, 0 ilegibles, 13 de 13 con capa de texto, sin OCR. Y lo que parecía el peor hallazgo —4 archivos (55% del texto) son compilaciones de estudiantes— cambia de signo: si el usuario sube lo que tiene a mano, eso es exactamente lo que va a subir. Como banco de pruebas, es realista |
 | 6 | Nada. Depende de las fuentes 2 y 3 | No | Pendiente |
-| 7 | No se generaron. El equipo decidió no usar sintéticos en esta instancia | No | Pendiente |
+| 7 | Nada todavía. El proveedor está acotado a ChatGPT o Claude, sin elegir, y no se probó ninguna salida | No | Pendiente |
+| 8 | No se generaron. El equipo decidió no usar sintéticos en esta instancia | No | Pendiente |

@@ -22,6 +22,7 @@ palabras, más que las 3.000 de la plantilla: ver
 | 0.4.1 | 2026-11-11 | Correcciones: enlaces al canvas y al notebook, movidos a `docs/hito_1/` y `docs/hito_2/`; la alternativa 3 de 3.1.3, que había quedado mezclada con la 2 |
 | 0.5 | 2026-11-11 | Spec completa (2.1, 2.2 y 2.3), según la plantilla de la cátedra (`plantilla/`). Criterios: válidos ≥ 90% y prioridad coherente ≥ 80%; p90 ≤ 120 s; 5 de 5 escenarios; ventaja ≥ 30 puntos. La corrección del contenido queda como señal del riesgo 2. Se suspenden «sin umbral» de latencia (1.3 y 3.1.5) y «ninguna ventaja» (1.2) |
 | 0.6 | 2026-11-12 | Plan de construcción (4.1). Recorte de unas 7.500 a unas 4.600 palabras, sin cambiar decisiones ni cifras; los textos suspendidos se conservan |
+| 0.6.1 | 2026-11-12 | Correcciones de coherencia: el happy path y el punto 4 de 2.2 comparaban la prioridad tema por tema; ahora usan el promedio por nivel, como 2.1.4, 2.3 y la validación del código |
 
 ---
 
@@ -157,7 +158,8 @@ fragmentos que mencionan los temas del formulario.
 - **Entonces** el sistema valida el formulario y extrae el texto de cada archivo
 - **Y** muestra un plan día por día que respeta las horas de cada día y cubre
   los 3 temas con su nombre
-- **Y** el tema de nivel más bajo recibe más minutos que el de nivel más alto
+- **Y** los minutos por nivel cumplen bajo ≥ medio ≥ alto, el mismo criterio
+  de 2.3
 - **Y** cada tema tiene su explicación
 - **Y** las preguntas de cada tema aparecen como borrador, con los archivos en
   los que se apoyan
@@ -239,8 +241,9 @@ La caída de la API no es este escenario: es un requerimiento de 3.1.5.
    no hay tabla de feedback (3.1.2). Para corregir, el usuario cambia el
    formulario y vuelve a pedir.
 4. **Peor caso borde (2.1.4).** Si la prioridad sigue mal después del
-   reintento, el usuario ve el plan con una marca que dice que un tema de
-   nivel más bajo recibió menos minutos que otro de nivel más alto. Puede
+   reintento, el usuario ve el plan con una marca que dice que los temas de
+   un nivel más bajo recibieron, en promedio, menos minutos que los de un
+   nivel más alto. Puede
    sumar horas o sacar los temas que mejor sabe y volver a pedir, o usar el
    plan sabiendo dónde falla.
 

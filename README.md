@@ -28,7 +28,7 @@ sobre lo fijado en la [definición de la PoC](docs/hito_3/definicion-de-la-poc.m
 | #1 | Propuesta y AI Opportunity Canvas (v2) | Tag `v1.0` |
 | #2 | Mapa de fuentes | Commit `2e69bc9` (sin tag) |
 | #3 | Hito 2: muestra, EDA de viabilidad, datasheet y veredicto (**decisión: ajustar el alcance**). Canvas actualizado a v3 | Tag `v2.0` |
-| #4 | Hito 3: definición de la PoC, **en curso**. Las cuatro partes están escritas (v0.6, unas 4.600 palabras contra las 3.000 de la plantilla, [registro](docs/decisiones-de-proceso.md)); falta la revisión cruzada con otro equipo antes del tag. Incluye los cierres del Hito 1 en el canvas (v5 y v6) y las correcciones de los documentos del Hito 2, sin tags nuevos ([registro](docs/decisiones-de-proceso.md)). El código de la PoC (`poc/`) corrió de punta a punta contra la API real el 10/11/2026, antes de sumar los ejercicios y las preguntas tipo parcial, con los 3 formularios sintéticos y el material entero del banco: 3 de 3 planes válidos, pero Redes necesitó un reintento y sigue sin respetar la prioridad por nivel (ver pendientes). Es una corrida de n=3, no la evaluación de la semana 9 | Sin tag todavía |
+| #4 | Hito 3: definición de la PoC, **en curso**. Las cuatro partes están escritas (v0.6.1, unas 4.600 palabras contra las 3.000 de la plantilla, [registro](docs/decisiones-de-proceso.md)); falta la revisión cruzada con otro equipo antes del tag. Incluye los cierres del Hito 1 en el canvas (v5 y v6) y las correcciones de los documentos del Hito 2, sin tags nuevos ([registro](docs/decisiones-de-proceso.md)). El código de la PoC (`poc/`) corrió de punta a punta contra la API real el 10/11/2026, antes de sumar los ejercicios y las preguntas tipo parcial, con los 3 formularios sintéticos y el material entero del banco: 3 de 3 planes válidos, pero Redes necesitó un reintento y sigue sin respetar la prioridad por nivel (ver pendientes). Es una corrida de n=3, no la evaluación de la semana 9 | Sin tag todavía |
 
 **En una línea:** el EDA mostró que el material disponible alcanza para construir
 y probar el sistema, pero no para priorizar temas por su peso real (2 de 3
@@ -165,7 +165,7 @@ Surgen del [mapa de fuentes](docs/hito_2/1-mapa-de-fuentes.md), el
 - [ ] Anonimizar la muestra (5 archivos con autoría en metadatos, 2 con nombre real).
 - [ ] Documentar de dónde se obtuvo la muestra: los enlaces a los repositorios estudiantiles, que el enunciado del Hito 2 pide para poder regenerarla.
 - [ ] Consultar permisos de redistribución a las cátedras (14 de 14 sin licencia declarada).
-- [ ] Definir el comportamiento del producto cuando el usuario no sube temario.
+- [x] Definir el comportamiento del producto cuando el usuario no sube temario: prioriza por nivel, fecha, horas y objetivo, sin atribuir peso a los temas ([definición de la PoC](docs/hito_3/definicion-de-la-poc.md), escenario 2.1.1).
 - [x] Elegir proveedor de LLM y fijar la versión del modelo: OpenAI, `gpt-5.4-mini-2026-03-17` ([definición de la PoC](docs/hito_3/definicion-de-la-poc.md), 3.1.1).
 - [ ] Sumar al banco material de al menos una carrera fuera de Ing. en Sistemas.
 - [ ] Volver a correr la prueba del modelo **sin el tope de 30.000 caracteres** (3.1.2), con las repeticiones de 3.1.1. Una primera corrida de la PoC (n=3, 10/11/2026) ya mostró que sin tope Redes manda unos 40.000 tokens por llamada y tardó 79 s con el reintento, contra ~13.900 tokens y 3,8 s de media en 3.1.1; el costo y la latencia de la definición no valen para el material entero.

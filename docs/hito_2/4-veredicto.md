@@ -3,7 +3,7 @@
 > **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 4 · **Fecha:** 03/11/2026
+> **Versión:** 5 · **Fecha:** 12/11/2026
 
 ---
 
@@ -40,7 +40,7 @@ procesable.
 1. **El banco cubre los casos de entrada que el producto va a recibir.** **14**
    archivos, **3** materias, **3** tipos de documento, **2** formatos, **2**
    orígenes (cátedra y estudiante), **1** materia con temario y **2** sin
-   (celdas 2 y 3). Y son procesables: **13 de 13** PDF con capa de texto, **0**
+   (celdas 2, 3 y 6). Y son procesables: **13 de 13** PDF con capa de texto, **0**
    ilegibles, **0** duplicados exactos (celda 4). Esto sostiene construir.
 2. **La representatividad sigue fallando, y el cambio de arquitectura no la
    toca.** **1** carrera, **1** institución, **0** materias fuera del área del

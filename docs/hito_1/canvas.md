@@ -3,7 +3,7 @@
 > **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 5 · **Fecha:** 03/11/2026
+> **Versión:** 6 · **Fecha:** 11/11/2026
 
 ## Cómo se usa
 
@@ -479,4 +479,4 @@ casos de menores de edad).
 | 2026-10-11 | 3 | **Decisión de arquitectura: el material de cada materia lo sube el usuario**, el equipo no mantiene corpus. Reescrita la sección 5; `datos/` pasa a banco de pruebas. Proveedor de LLM acotado a ChatGPT o Claude | Fede S. |
 | 2026-10-27 | 4 | Sección 3 alineada al veredicto del Hito 2 y a la definición de la PoC: el usuario sube su material, la priorización no usa el peso real de los temas, el material generado va con revisión humana, la regla de refutación sin peso y el *baseline* de llamada única como refutación explícita. Proveedor de LLM: ChatGPT (OpenAI), única API disponible | Marco P. |
 | 2026-11-03 | 5 | Cierre del Hito 1. Se quitan las marcas de pendientes con el docente, que nunca se presentaron: las resuelven el veredicto del Hito 2 y la definición de la PoC. Umbrales y encuesta de la sección 6 marcados como suspendidos, con referencia al veredicto. Se completan el nombre del equipo y el saboteador, y el proveedor pasa a OpenAI con el modelo elegido. **Sin tags nuevos: estos cierres se suben como parte del Hito 3** | Marco P. |
-| 2026-11-11 | 6 | Sección 6: la referencia a los criterios de aceptación de la definición de la PoC (v0.5) aclara que sólo la validez estructural y la coherencia de priorización son criterio; la calidad por rúbrica queda como señal del riesgo 2. Antes decía que las tres proxies se fijaban allí | Marco P. |
+| 2026-11-11 | 6 | Sección 6: la referencia a los criterios de aceptación de la definición de la PoC (v0.5) aclara que sólo la validez estructural y la coherencia de priorización son criterio; la calidad por rúbrica queda como señal del riesgo 2. Antes decía que las tres proxies se fijaban allí. El 2026-11-12 se corrige el encabezado, que había quedado en la versión 5 | Marco P. |

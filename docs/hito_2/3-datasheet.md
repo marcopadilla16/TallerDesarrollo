@@ -3,7 +3,7 @@
 > **Equipo:** sanches-padilla
 > **Integrantes:** Padilla, Marco; Sanches, Federico
 > **Caso:** Study Copilot
-> **Versión:** 3 · **Fecha:** 03/11/2026
+> **Versión:** 4 · **Fecha:** 12/11/2026
 > **Muestra:** `datos/` — 14 archivos de 3 cátedras de Ing. en Sistemas (UTN FR Delta)
 ---
 
@@ -71,7 +71,7 @@ corpus, eso era una carencia que dejaba dos materias sin poder priorizarse.
 Ahora que el temario lo sube el usuario —y muchos no lo van a tener a mano— es
 **el caso de prueba de «sin temario»**, que el producto tiene que saber manejar.
 
-Lo que sí falta sin atenuante: **6 de 14** archivos sin fecha en metadatos,
+Lo que sí falta sin atenuante: **8 de 14** archivos sin fecha en metadatos,
 **9 de 14** sin autor, ninguno con licencia declarada, y ninguno con la
 ponderación de evaluación.
 
