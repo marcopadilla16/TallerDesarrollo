@@ -5,6 +5,10 @@
     3. generar con el modelo   6. registrar y mostrar
 """
 
+# Sin esto, en Python < 3.14 la anotación `ingesta: ingesta.Ingesta` de Pedido se evalúa
+# cuando el campo `ingesta` ya tapó al módulo, y falla con AttributeError.
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from poc import config, generador, ingesta, registro
