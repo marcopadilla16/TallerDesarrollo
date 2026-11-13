@@ -28,7 +28,7 @@ sobre lo fijado en la [definición de la PoC](docs/hito_3/definicion-de-la-poc.m
 | #1 | Propuesta y AI Opportunity Canvas (v2) | Tag `v1.0` |
 | #2 | Mapa de fuentes | Commit `2e69bc9` (sin tag) |
 | #3 | Hito 2: muestra, EDA de viabilidad, datasheet y veredicto (**decisión: ajustar el alcance**). Canvas actualizado a v3 | Tag `v2.0` |
-| #4 | Hito 3: definición de la PoC, **en curso**. Las cuatro partes están escritas (v0.6.1, unas 4.600 palabras contra las 3.000 de la plantilla, [registro](docs/decisiones-de-proceso.md)); falta la revisión cruzada con otro equipo antes del tag. Incluye los cierres del Hito 1 en el canvas (v5 y v6) y las correcciones de los documentos del Hito 2, sin tags nuevos ([registro](docs/decisiones-de-proceso.md)). El código de la PoC (`poc/`) corrió de punta a punta contra la API real el 10/11/2026, antes de sumar los ejercicios y las preguntas tipo parcial, con los 3 formularios sintéticos y el material entero del banco: 3 de 3 planes válidos, pero Redes necesitó un reintento y sigue sin respetar la prioridad por nivel (ver pendientes). Es una corrida de n=3, no la evaluación de la semana 9 | Sin tag todavía |
+| #4 | Hito 3: definición de la PoC, **versión 1** (unas 4.600 palabras contra las 3.000 de la plantilla, [registro](docs/decisiones-de-proceso.md)). Se cerró sin la revisión cruzada con otro equipo, que queda para después ([registro](docs/decisiones-de-proceso.md)). Incluye los cierres del Hito 1 en el canvas (v5 y v6) y las correcciones de los documentos del Hito 2, sin tags nuevos ([registro](docs/decisiones-de-proceso.md)). El código de la PoC (`poc/`) corrió de punta a punta contra la API real el 10/11/2026, antes de sumar los ejercicios y las preguntas tipo parcial, con los 3 formularios sintéticos y el material entero del banco: 3 de 3 planes válidos, pero Redes necesitó un reintento y sigue sin respetar la prioridad por nivel (ver pendientes). Es una corrida de n=3, no la evaluación de la semana 9 | Tag `hito-3` |
 
 **En una línea:** el EDA mostró que el material disponible alcanza para construir
 y probar el sistema, pero no para priorizar temas por su peso real (2 de 3
@@ -51,7 +51,7 @@ anterior.
 | 5 | [eda-viabilidad.ipynb](docs/hito_2/eda-viabilidad.ipynb) | Los números del EDA: una celda por propiedad y por tipo de *leakage* |
 | 6 | [Datasheet](docs/hito_2/3-datasheet.md) | Qué se sabe y qué no de la muestra (formato *Datasheets for Datasets*) |
 | 7 | [Veredicto](docs/hito_2/4-veredicto.md) | La decisión, sus fundamentos, la exposición al riesgo y el nuevo alcance |
-| 8 | [Definición de la PoC](docs/hito_3/definicion-de-la-poc.md) | Qué se construye, cómo se valida y con qué modelo. En curso |
+| 8 | [Definición de la PoC](docs/hito_3/definicion-de-la-poc.md) | Qué se construye, cómo se valida y con qué modelo |
 
 Cada número citado en el EDA y en el veredicto remite a una celda concreta del
 notebook. El enunciado de la cátedra para el Hito 2 está en
@@ -170,6 +170,7 @@ Surgen del [mapa de fuentes](docs/hito_2/1-mapa-de-fuentes.md), el
 - [ ] Sumar al banco material de al menos una carrera fuera de Ing. en Sistemas.
 - [ ] Volver a correr la prueba del modelo **sin el tope de 30.000 caracteres** (3.1.2), con las repeticiones de 3.1.1. Una primera corrida de la PoC (n=3, 10/11/2026) ya mostró que sin tope Redes manda unos 40.000 tokens por llamada y tardó 79 s con el reintento, contra ~13.900 tokens y 3,8 s de media en 3.1.1; el costo y la latencia de la definición no valen para el material entero.
 - [ ] Decidir qué hacer con la prioridad en el caso de 6 temas en 5 horas: el reintento no la corrigió en la corrida real (riesgo 1 de la definición; plan B: regla determinista).
-- [ ] Correr contra la API real el contenido nuevo (ejercicios prácticos y preguntas tipo parcial, con y sin archivos): los tests lo cubren con la API simulada, pero la corrida real del 10/11/2026 fue anterior y sólo pidió el plan. Con tres tipos de contenido la salida es más larga, así que se espera más costo y latencia.
+- [ ] Correr contra la API real el contenido nuevo (ejercicios prácticos y preguntas tipo parcial, con y sin archivos): los tests lo cubren con la API simulada, pero la corrida real del 10/11/2026 fue anterior y sólo pidió el plan. Con tres tipos de contenido la salida es más larga, así que se espera más costo y latencia. Avance (12/11/2026): tres pedidos sueltos de Gestión de Datos, con archivos, desde la interfaz y por `pipeline`, todos con `gpt-5.4-mini-2026-03-17`: 2 válidos al primer intento (6 a 7 s) y 1 inválido después del reintento (un día excedido y la prioridad invertida, con una explicación que lee «nivel alto» como «tema importante»). Falta el caso sin archivos.
+- [ ] El plan puede incluir un bloque «Repaso general» (`REPASO` en `poc/validacion.py`), que la validación acepta, pero la definición dice que el plan no inventa temas (2.1 y 2.3) y no menciona la excepción. Decidir si se documenta o se quita.
 - [ ] Rediscutir la rúbrica de corrección conceptual: la definición (v0.4) la pide ahora para tres tipos de contenido y para pedidos sin archivos, y entraba en tres semanas sólo para uno (1.3, suspendido).
 - [ ] Script de evaluación (≥30 planes, workflow vs. *baseline*): mide los criterios de aceptación de la sección 2.3, fijados en la v0.5 de la definición (calidad, latencia, casos borde y ventaja sobre el *baseline*).

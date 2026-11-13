@@ -93,6 +93,30 @@ opción del anexo es la salida.
 **Qué se resigna.** Incumplir una indicación explícita de la plantilla, a
 sabiendas.
 
+## Cierre del Hito 3 sin la revisión cruzada
+
+**Fecha:** 2026-11-12 · **Momento del proyecto:** cierre del Hito 3 ·
+**Estado:** aplicada
+
+**Qué se decidió.** Pasar la definición de la PoC a la versión 1 y entregarla con
+el tag `hito-3` sin haber hecho la revisión cruzada con otro equipo.
+
+**Por qué.** La consigna (`docs/hito_3/README.md`) la ubica en la Clase 6 y no
+pide entregar nada de ella: lo que surja se corrige antes del tag. El equipo no
+la hizo en esa instancia y decidió no frenar el cierre por ella. Como reemplazo
+parcial, antes de la versión 1 se hizo una revisión de coherencia de todo el
+repo, que corrigió inconsistencias en la definición, el canvas, el README y los
+documentos del Hito 2 (las del Hito 2, en la tercera tanda, arriba).
+
+**Alternativa descartada.** *Esperar a la revisión cruzada para crear el tag.*
+Dejaba el cierre atado a la agenda de otro equipo, con la fecha de entrega
+todavía sin confirmar.
+
+**Qué se resigna.** La lectura en frío de alguien que no escribió el documento:
+la revisión de coherencia busca contradicciones, no lo que se puede leer de dos
+maneras. Si la revisión cruzada se hace después, lo que surja va a una versión
+posterior de la definición, como documento vivo.
+
 ## OpenSpec y Spec Kit para el desarrollo guiado por especificaciones
 
 **Fecha:** 2026-11-03 · **Momento del proyecto:** Hito 3 en curso, sin código del

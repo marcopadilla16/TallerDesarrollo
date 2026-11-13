@@ -23,6 +23,7 @@ palabras, más que las 3.000 de la plantilla: ver
 | 0.5 | 2026-11-11 | Spec completa (2.1, 2.2 y 2.3), según la plantilla de la cátedra (`plantilla/`). Criterios: válidos ≥ 90% y prioridad coherente ≥ 80%; p90 ≤ 120 s; 5 de 5 escenarios; ventaja ≥ 30 puntos. La corrección del contenido queda como señal del riesgo 2. Se suspenden «sin umbral» de latencia (1.3 y 3.1.5) y «ninguna ventaja» (1.2) |
 | 0.6 | 2026-11-12 | Plan de construcción (4.1). Recorte de unas 7.500 a unas 4.600 palabras, sin cambiar decisiones ni cifras; los textos suspendidos se conservan |
 | 0.6.1 | 2026-11-12 | Correcciones de coherencia: el happy path y el punto 4 de 2.2 comparaban la prioridad tema por tema; ahora usan el promedio por nivel, como 2.1.4, 2.3 y la validación del código |
+| 1 | 2026-11-12 | Versión entregada con el tag `hito-3`. Sin cambios de contenido respecto de la 0.6.1; la revisión cruzada no se hizo antes del cierre ([`decisiones-de-proceso.md`](../decisiones-de-proceso.md)) |
 
 ---
 
